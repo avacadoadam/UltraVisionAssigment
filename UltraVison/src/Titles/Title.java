@@ -1,19 +1,23 @@
 package Titles;
 
+import java.util.Calendar;
 import java.util.Date;
 
-public abstract class Title {
+public class Title {
 
     private int titleID;
     private String titleName;
-    private Date yearOfRelease;
-    private ProductType accessLevel;
+    private Calendar yearOfRelease;
+    private ProductType productType;
+    private boolean rented;
 
-    public Title(int titleID, String titleName, Date yearOfRelease, ProductType accessLevel) {
+
+    public Title(int titleID, String titleName, Calendar yearOfRelease, ProductType productType, boolean rented) {
         this.titleID = titleID;
         this.titleName = titleName;
         this.yearOfRelease = yearOfRelease;
-        this.accessLevel = accessLevel;
+        this.productType = productType;
+        this.rented = rented;
     }
 
     public int getTitleID() {
@@ -24,11 +28,16 @@ public abstract class Title {
         return titleName;
     }
 
-    public Date getYearOfRelease() {
+    public Calendar getYearOfRelease() {
         return yearOfRelease;
     }
 
     public ProductType getProductType() {
-        return accessLevel;
+        return productType;
     }
+
+    public boolean isRented() {
+        return rented;
+    }
+
 }

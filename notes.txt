@@ -7,26 +7,28 @@
 - If customer changes AccessPlan and the disered one is less expensive no fee will be applied
 - A customer can only rent one Rental with loyality points and does not effect the max he may have
 - The presenter will be sitting on a port waiting for https request find a package that will do that
+-Create View
+- the system should not hold any information
+- the system should init the databse if the Information is not there
+-ensure system is thread safe
+-customer may not rent if he has a overdue rental
+-customer may not rent if is loyality points are neagtive
 
-Issues- 
-may cause insue when creating new database from System as you must add a start ID in first row
+Testing ---
+Ensure proper ID is given from updateStatement;class :SQLite method ::registerCustomer
 
-
-TODO 
-- add exceptions to Customer 
-- Seperate out Rentals with types in customer
-- Ensure that not too many objects are in Customer and not duplicate 
-- Change System to allow for Access Plan to control how many Titles one is allowed rent premiue being infinite
-- find why to loop through all children on a abstract class and test them agasnt a string
--find out how to call back to the view even if it is not running java
+TODO  
+- Use Exception based problem solving
 - find out a java package that can listen to a port
-- Decide whether the system should hold information.
 - or be on a transcation based where every new transcation the needed information fetched from the database the request then
 process any updated or new data also placed in database then the result being show to the modal
 - Connect Presenter to Database
 - Find better UML modeling software
-- make database singleton
-- Create Rental Class
+- make database singleton thead safe
+- Show all rentals that overdue to system admin (difficult with sqlite3)
+- check if customer has overdue Rental then allow(add to uml)!
+-Split Database commands based on type of User how may need them
+
 
 
 -----Activity Diagram-----

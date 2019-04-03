@@ -12,12 +12,13 @@ import java.math.BigDecimal;
  */
 public class MembershipCard {
 
-    private int loyalityPoints = 0;
+    private int loyalityPoints;
     private Card card;
     private AccessPlan accessPlan;
 
 
-    public MembershipCard(Card card, AccessPlan accessPlan) {
+    public MembershipCard(int loyalityPoints, Card card, AccessPlan accessPlan) {
+        this.loyalityPoints = loyalityPoints;
         this.card = card;
         this.accessPlan = accessPlan;
     }

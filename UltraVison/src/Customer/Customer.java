@@ -18,11 +18,11 @@ public class Customer {
     private int numOfActiveRentals;
     private boolean rentedWithLoyality = false;
 
-    public Customer(String lname, String DOB, String address,int customerID, String fname, int numOfActiveRentals, AccessPlan plan, Card card) {
+    public Customer(String lname, String DOB, String address,int customerID, String fname, int numOfActiveRentals, AccessPlan plan, Card card,int loyalityPoints) {
         this.customerID = customerID;
         this.fname = fname;
         this.numOfActiveRentals = numOfActiveRentals;
-        this.membershipCard = new MembershipCard(card,plan);
+        this.membershipCard = new MembershipCard(loyalityPoints,card,plan);
         this.lname = lname;
         this.DOB = DOB;
         this.address = address;
