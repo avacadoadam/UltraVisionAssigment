@@ -11,12 +11,14 @@ import Conversions.TimeConversions;
 
 import java.sql.*;
 
-public class SQLite extends BaseDatabase {
+public class SQLite implements BaseDatabase {
 
     private Connection connection = null;
+    private DatabaseCommands commands;
 
     public SQLite() throws Exception {
         if (!this.connectToDatabase()) throw new Exception("Can not connect to database");
+        this.commands = new DatabaseCommands();
     }
 
 
@@ -44,7 +46,6 @@ public class SQLite extends BaseDatabase {
         statement.setQueryTimeout(30);
         return statement.executeUpdate(this.commands.createCustomer(fname, lname, DOB, address, accessPlan, card));
     }
-
 
 
     @Override

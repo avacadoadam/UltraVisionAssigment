@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 /**
  * *
  * * A simple class to reprsent how a card payment may be processed and may return life like exceptions
- * * this payment System will most likely be access through some kind of API or invoice system
+ * * this payment InternalSystem will most likely be access through some kind of SocketAPI or invoice system
  * *
  */
 public class DebitCard extends Card {

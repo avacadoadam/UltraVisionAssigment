@@ -1,7 +1,7 @@
 package Customer.Card;
 
 /**
- * A callback to the payment System as some time may take place
+ * A callback to the payment InternalSystem as some time may take place
  */
 public interface CardPaymentCallback {
 

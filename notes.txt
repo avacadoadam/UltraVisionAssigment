@@ -1,33 +1,42 @@
-- Ensure no threads needed
-- Ensure that all changes to data are updated on the Database
-- Find a way that theses systems can run side by side.
+- Ensure no threads needed = (Will need in API thread)
+- Ensure that all changes to data are updated on the Database ~ will test
+- Find a way that theses systems can run side by side  = (Due to implementation of Database). 
 
 -Assumsuptions
 - If customer goes to change AccessPlan If current one is more expensive then new there be a fee totaling the differnece
 - If customer changes AccessPlan and the disered one is less expensive no fee will be applied
 - A customer can only rent one Rental with loyality points and does not effect the max he may have
 - The presenter will be sitting on a port waiting for https request find a package that will do that
--Create View
 - the system should not hold any information
 - the system should init the databse if the Information is not there
 -ensure system is thread safe
 -customer may not rent if he has a overdue rental
 -customer may not rent if is loyality points are neagtive
+-A system can change Database or view with no problems to Presenter
+- Validates data in View, further in Presenter and also could implement in Modal
+
 
 Testing ---
 Ensure proper ID is given from updateStatement;class :SQLite method ::registerCustomer
 
 TODO  
 - Use Exception based problem solving
-- find out a java package that can listen to a port
-- or be on a transcation based where every new transcation the needed information fetched from the database the request then
-process any updated or new data also placed in database then the result being show to the modal
-- Connect Presenter to Database
 - Find better UML modeling software
-- make database singleton thead safe
-- Show all rentals that overdue to system admin (difficult with sqlite3)
+- make database singleton thead safe (Shouldn't be public)
+- Show all rentals that are overdue to system admin (difficult with sqlite3)
 - check if customer has overdue Rental then allow(add to uml)!
 -Split Database commands based on type of User how may need them
+-bill customer for late rental billing
+- Create Loggin System
+- Add benchmarking
+- Application Protocol should be jar file that can't be access by either view or Presenter
+
+FINISH API, APPLICATION PROTOCOL,PRESENTER
+
+
+The ViewPresenterSocket:
+shoudl be a interface so the genral system can be preserved if upgraded to a
+HTTP web based system.
 
 
 
