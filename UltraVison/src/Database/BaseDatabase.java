@@ -3,13 +3,12 @@ package Database;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
 import Customer.Customer;
-import Rental.Rental;
 import Titles.ProductType;
 import Titles.Title;
+import errors.CouldNotFindAccessPlan;
+import errors.InvalidCard;
 
 import java.sql.SQLException;
-import java.util.Calendar;
-
 /**
  * The Template a class that controls accessing the database must abide by to work with system.
  */
@@ -22,20 +21,24 @@ public abstract class BaseDatabase {
 
     /**
      * Will update rental to show that it is not active will then show that title is back into system
-     * @param title
+     * @param productID
      * @return
      * @throws SQLException
      */
-    public abstract boolean returnRental(Title title) throws SQLException;
+    public abstract boolean returnRental(int productID) throws SQLException;
+
 
     /**
      * Will Create a Entry of the Rental and also update title
-     * @param title
-     * @param customer
+     * @param productID
+     * @param customerID
      * @return
      * @throws SQLException
      */
-    public abstract boolean rent(Title title, Customer customer) throws SQLException;
+    public abstract void rent(int productID, int customerID, String dateRented, String due) throws SQLException;
+
+
+    public abstract void rentWithLoyaltyPoints(int titleID, int customerID,String dateRented,String due) throws SQLException;
 
     /**
      * Allows the customer to search all titles
@@ -72,21 +75,16 @@ public abstract class BaseDatabase {
      * @param CustomerID
      * @return
      */
-    public abstract Customer getCustomerData(String CustomerID);
+    public abstract Customer getCustomerData(int CustomerID) throws SQLException, CouldNotFindAccessPlan, InvalidCard;
 
     /**
      * To get information about a title
      * @param titleID
      * @return
      */
-    public abstract Title getTitleInformation(String titleID);
+    public abstract Title getTitleInformation(int titleID) throws SQLException;
 
-    /**
-     * To get Information About a rental
-     * @param titleID
-     * @return
-     */
-    public abstract Rental getRentalInformation(String titleID);
+
 
 
 }
@@ -104,13 +102,13 @@ final class DatabaseCommands {
     }
 
     public String createTitle(String titleName, ProductType type, String yearOfRelease) {
-        String sql = "INSERT INTO title(titleName,typeOfMovie,yearOfRelease) VALUES (\"%s\",\"%s\",\"%s\");";
+        String sql = "INSERT INTO title(titleName,typeOfMovie,yearOfRelease) VALUES (\"%s\",\"%s\",v%s\");";
         return String.format(sql, titleName, type.getType(), yearOfRelease);
     }
 
-    public String createRental(int customerID, int titleID) {
-        String sql = "INSERT INTO rentals(customer_ID, title_ID, dateRented) VALUES (%d,%d,\"%s\",NULL,0);";
-        return String.format(sql, customerID, titleID, getDate());
+    public String createRental(int customerID, int titleID,String dateRented,String dateDue) {
+        String sql = "INSERT INTO rentals(customer_ID, title_ID, dateRented, dateDue) VALUES (%d,%d,\"%s\",\"%s\");";
+        return String.format(sql, customerID,titleID, dateRented, dateDue);
     }
 
     /**
@@ -128,23 +126,28 @@ final class DatabaseCommands {
         return String.format(sql, titleID, a);
     }
 
+    public String updateLoyaltyPoints(int customerID,int amount){
+        String sql = "UPDATE customer SET loyaltyPoints  = loyaltyPoints + %d WHERE ID = %d;";
+        return String.format(sql, amount, customerID);
+    }
+
     /**
      * Updates the rental to indicate that it is over
      *
      * @param titleID
      * @return
      */
-    public String updateRental(int titleID) {
+    public String updateRental(int titleID,String dateReturned) {
         String sql = "UPDATE rentals SET dateReturned = \"%s\",returned = 1 WHERE title_ID = %d;";
-        return String.format(sql, getDate(), titleID);
+        return String.format(sql, dateReturned, titleID);
     }
 
     public String getAllAvaibleTitles() {
-        return "SELECT * FROM title WHERE rented = 0";
+        return "SELECT * FROM title WHERE rented = 0;";
     }
 
     public String getAllAvaibleTitles(String productType) {
-        String sql = "SELECT * FROM title WHERE rented = 0 AND typeOfMovie = %s";
+        String sql = "SELECT * FROM title WHERE rented = 0 AND typeOfMovie = \"%s\";";
         return String.format(sql, productType);
     }
 
@@ -179,10 +182,20 @@ final class DatabaseCommands {
         return String.format(sql, cardType, customerID);
     }
 
-    private String getDate() {
-        Calendar cal = Calendar.getInstance();
-        return cal.getTime().toString();
+    public String getCustomerInformation(int customerID){
+        String sql = "SELECT * FROM customer WHERE ID = %d;";
+        return String.format(sql,customerID);
     }
+    public String getProductInformation(int productID){
+        String sql = "SELECT * FROM title WHERE ID = %d;";
+        return String.format(sql,productID);
+    }
+    public String getNumberOfRentals(int customerID){
+        String sql = "SELECT COUNT(ID) FROM rentals WHERE returned = 0 AND customer_ID = %d;";
+        return String.format(sql,customerID);
+    }
+
+
 
 
 }

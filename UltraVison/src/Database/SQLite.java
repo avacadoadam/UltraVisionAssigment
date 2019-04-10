@@ -7,6 +7,8 @@ import Rental.Rental;
 import Titles.ProductType;
 import Titles.Title;
 import Conversions.TimeConversions;
+import errors.CouldNotFindAccessPlan;
+import errors.InvalidCard;
 
 
 import java.sql.*;
@@ -21,21 +23,28 @@ public class SQLite extends BaseDatabase {
 
 
     @Override
-    public boolean returnRental(Title title) throws SQLException {
+    public boolean returnRental(int productID) throws SQLException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        statement.executeUpdate(this.commands.updateTitleRented(title.getTitleID(), false));
-        statement.executeUpdate(this.commands.updateRental(title.getTitleID()));
+        statement.executeUpdate(this.commands.updateTitleRented(productID, false));
+        statement.executeUpdate(this.commands.updateRental(productID,TimeConversions.returnTodayDate()));
         return true;
     }
 
     @Override
-    public boolean rent(Title title, Customer customer) throws SQLException {
+    public void rent(int productID, int customerID, String dateRented, String due) throws SQLException {
         Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);  // set timeout to 30 sec.
-        statement.executeUpdate(this.commands.createRental(customer.getCustomerID(), title.getTitleID()));
-        statement.executeUpdate(this.commands.updateTitleRented(title.getTitleID(), true));
-        return true;
+        statement.setQueryTimeout(30);
+        statement.executeUpdate(this.commands.createRental(customerID, productID, dateRented, due));
+        statement.executeUpdate(this.commands.updateTitleRented(productID, true));
+    }
+
+    @Override
+    public void rentWithLoyaltyPoints(int productID, int customerID, String dateRented, String due) throws SQLException {
+        Statement statement = this.connection.createStatement();
+        statement.setQueryTimeout(30);
+        statement.execute(this.commands.updateLoyaltyPoints(customerID, -100));
+        rent(productID, customerID, dateRented, due);
     }
 
     @Override
@@ -43,6 +52,40 @@ public class SQLite extends BaseDatabase {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
         return statement.executeUpdate(this.commands.createCustomer(fname, lname, DOB, address, accessPlan, card));
+    }
+
+    @Override
+    public Customer getCustomerData(int customerID) throws SQLException, CouldNotFindAccessPlan, InvalidCard {
+        Statement statement = this.connection.createStatement();
+        statement.setQueryTimeout(30);
+        ResultSet rs = statement.executeQuery(commands.getNumberOfRentals(customerID));
+        int NumOfRentals = rs.getInt("NumOfRentals");
+        ResultSet rs1 = statement.executeQuery(commands.getCustomerInformation(customerID));
+
+        Customer customer = new Customer(rs.getString("lName"),
+                rs.getString("DOB"),
+                rs.getString("address"),
+                rs.getInt("ID"),
+                rs.getString("fName"),
+                NumOfRentals,
+                AccessPlan.getTypeFromString(rs.getString("accessPlan")),
+                Card.CardFactory(rs.getString("cardType"),new Long(rs.getString("cardNumber"))),
+                rs.getInt("loyaltyPoints"));
+
+        return customer;
+    }
+
+    @Override
+    public Title getTitleInformation(int productID) throws SQLException {
+        Statement statement = this.connection.createStatement();
+        statement.setQueryTimeout(30);
+        ResultSet rs = statement.executeQuery(commands.getProductInformation(productID));
+        boolean rented = (rs.getInt("rented") == 1);
+        return new Title(rs.getInt("ID"),
+                rs.getString("titleName"),
+                rs.getString("typeOfMovie"),
+                ProductType.IndentifyFromString(rs.getString("yearOfRelease")),
+                rented);
     }
 
 
@@ -83,7 +126,7 @@ public class SQLite extends BaseDatabase {
 
                 title[counter] = new Title(rs.getInt("ID"),
                         rs.getString("titleName"),
-                        TimeConversions.convertString(rs.getString("typeOfMovie")),
+                        rs.getString("typeOfMovie"),
                         ProductType.IndentifyFromString(rs.getString("yearOfRelease")),
                         rented);
             } catch (Exception e) {
@@ -97,7 +140,8 @@ public class SQLite extends BaseDatabase {
 
         try {
             // create a database connection
-            this.connection = DriverManager.getConnection("jdbc:sqlite:UltraVision.db");
+
+            this.connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\avaca\\Desktop\\Assigment\\UltraVison\\src\\ultraVision.db");
             return true;
 
         } catch (SQLException e) {

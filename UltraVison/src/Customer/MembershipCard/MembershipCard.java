@@ -23,7 +23,7 @@ public class MembershipCard {
         this.accessPlan = accessPlan;
     }
 
-    public boolean canRentWithLoyalityPoints() {
+    public boolean canRentWithLoyalityPoints(){
         if (loyalityPoints > 100){
             this.loyalityPoints =- 100;
             return true;

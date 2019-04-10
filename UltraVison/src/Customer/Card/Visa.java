@@ -1,4 +1,40 @@
 package Customer.Card;
 
-public class Visa {
+import errors.CardSecurityError;
+import errors.InvalidCard;
+
+import java.math.BigDecimal;
+
+public class Visa extends Card {
+
+
+    public Visa(Long cardNumber) throws InvalidCard {
+        super(cardNumber, "Visa Card");
+    }
+
+    @Override
+    public void requestRefund(BigDecimal amountEuros, CardPaymentCallback callback) {
+        boolean b = true;
+        if (b) callback.successfullyPayment();
+        else callback.unsuccessfulyPayment();
+
+    }
+
+    @Override
+    public void requestPayment(BigDecimal amountEuros, CardPaymentCallback callback) {
+        boolean b = true;
+        if (b) callback.successfullyPayment();
+        else callback.unsuccessfulyPayment();
+
+    }
+
+    @Override
+    public boolean requestRefund(BigDecimal amountEuros) throws CardSecurityError {
+        return true;
+    }
+
+    @Override
+    public boolean requestPayment(BigDecimal amountEuros) throws CardSecurityError {
+        return true;
+    }
 }

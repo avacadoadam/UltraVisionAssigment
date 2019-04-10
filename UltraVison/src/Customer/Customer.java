@@ -29,10 +29,9 @@ public class Customer {
     }
     /**
      * First Ensures customer is under Max Rental then checks if there is the memberShipCard has enough loyalty points
-     * @param title the ID of the title looking to be rented
      * @return true if can be rented
      */
-    public boolean rentWithLoyalityPoints(Title title) {
+    public boolean rentWithLoyalityPoints() {
         if (checkUnderMaxRentals()) {
             return this.membershipCard.canRentWithLoyalityPoints();
         }
@@ -61,6 +60,14 @@ public class Customer {
 
     public int getCustomerID() {
         return customerID;
+    }
+
+    public static boolean validateFname(String fname) {
+        return !fname.contains("[0-9]+");
+    }
+
+    public static boolean validateLame(String lname) {
+        return !lname.contains("[0-9]+");
     }
 
 

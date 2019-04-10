@@ -1,4 +1,4 @@
-package Customer.Card.CardErrors;
+package errors;
 
 /**
  *
@@ -10,8 +10,8 @@ package Customer.Card.CardErrors;
 public class CardSecurityError extends Exception{
 
 
-    public CardSecurityError(String message) {
-        super(message);
+    public CardSecurityError() {
+        super("Error Processing card");
     }
 
 

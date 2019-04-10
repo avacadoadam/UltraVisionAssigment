@@ -1,4 +1,8 @@
 package errors;
 
-public class CustomerAccountInformationError {
+public class CustomerAccountInformationError extends Throwable {
+
+    public CustomerAccountInformationError(String message) {
+        super(message);
+    }
 }

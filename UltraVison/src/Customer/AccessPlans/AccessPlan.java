@@ -1,6 +1,7 @@
 package Customer.AccessPlans;
 
 import Titles.ProductType;
+import errors.CouldNotFindAccessPlan;
 
 import java.math.BigDecimal;
 
@@ -10,19 +11,46 @@ import java.math.BigDecimal;
  * and how many they can rent at any given time.
  */
 
-public abstract class AccessPlan {
+public enum AccessPlan {
 //TODO most likly needs to be enum
+
+    TV("TV lovers",BigDecimal.valueOf(30),4){
+        @Override
+        public boolean canRent(ProductType type) {
+            return (type == ProductType.TV);
+        }
+    },
+    VL("Video Lover", BigDecimal.valueOf(20),4){
+        @Override
+        public boolean canRent(ProductType type) {
+            return (type == ProductType.Video);
+        }
+    },
+    ML("Music Lover", BigDecimal.valueOf(10),4){
+        @Override
+        public boolean canRent(ProductType type) {
+            return (type == ProductType.Music);
+        }
+    },
+    PR("Premium", BigDecimal.valueOf(40),4){
+        @Override
+        public boolean canRent(ProductType type) {
+            return true;
+        }
+    }
+    ;
 
     private final String accessPlanName;
     private final BigDecimal price;
     private final int maxRentals;
 
 
-    public AccessPlan(String accessPlanName, BigDecimal price, int maxRentals) {
+    AccessPlan(String accessPlanName, BigDecimal price, int maxRentals) {
         this.accessPlanName = accessPlanName;
         this.price = price;
         this.maxRentals = maxRentals;
     }
+
 
     public abstract boolean canRent(ProductType type);
 
@@ -36,5 +64,15 @@ public abstract class AccessPlan {
 
     public int getMaxRentals() {
         return maxRentals;
+    }
+
+    public static AccessPlan getTypeFromString(String accessPlanName) throws CouldNotFindAccessPlan {
+        switch (accessPlanName.toLowerCase()){
+            case "Music Lover":return AccessPlan.ML;
+            case "Premium":return  AccessPlan.PR;
+            case "TV lovers":return  AccessPlan.TV;
+            case "Video Lover":return  AccessPlan.VL;
+            default:throw new CouldNotFindAccessPlan();
+        }
     }
 }

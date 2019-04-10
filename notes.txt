@@ -13,23 +13,31 @@
 -ensure system is thread safe
 -customer may not rent if he has a overdue rental
 -customer may not rent if is loyality points are neagtive
+-customer can not rent if he has over due rentals!!!!!!!!!!!!!!!!!!!!!
 
 Testing ---
 Ensure proper ID is given from updateStatement;class :SQLite method ::registerCustomer
 
 TODO  
-- Use Exception based problem solving
 - find out a java package that can listen to a port
-- or be on a transcation based where every new transcation the needed information fetched from the database the request then
-process any updated or new data also placed in database then the result being show to the modal
-- Connect Presenter to Database
 - Find better UML modeling software
-- make database singleton thead safe
 - Show all rentals that overdue to system admin (difficult with sqlite3)
 - check if customer has overdue Rental then allow(add to uml)!
 -Split Database commands based on type of User how may need them
+-TIme Coversions
+-Update Title to product
+-ensure Command Class string formart is correct in order
+-Redesign database on functions 
+-ensure all ID are int
+
+task
+read TDD test driven development
+add junit testing
+Create flow of every command through system,what info will be needed from database & queries string,then update api documenation lucid chart
+Tidy up database Command class along with baseCommand maby based on DML etc
+create debuggin clienet register callback with API
+finish todo 
+think of threaded way where they start
+think of the http or socket class linking to api or API being it
 
 
-
------Activity Diagram-----
-Desription---

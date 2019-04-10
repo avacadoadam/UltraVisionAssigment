@@ -1,6 +1,7 @@
 package Customer.Card;
 
-import Customer.Card.CardErrors.CardSecurityError;
+import errors.CardSecurityError;
+import errors.InvalidCard;
 
 import java.math.BigDecimal;
 
@@ -13,8 +14,8 @@ import java.math.BigDecimal;
 public class DebitCard extends Card {
 
 
-    public DebitCard(String cardNumber) {
-        super(cardNumber,CardType.Debit);
+    public DebitCard(Long cardNumber) throws InvalidCard {
+        super(cardNumber,"Debit Card");
     }
 
     @Override
@@ -31,5 +32,15 @@ public class DebitCard extends Card {
         if (b) callback.successfullyPayment();
         else callback.unsuccessfulyPayment();
 
+    }
+
+    @Override
+    public boolean requestRefund(BigDecimal amountEuros) throws CardSecurityError {
+        return true;
+    }
+
+    @Override
+    public boolean requestPayment(BigDecimal amountEuros) throws CardSecurityError {
+        return true;
     }
 }

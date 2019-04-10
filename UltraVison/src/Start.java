@@ -28,7 +28,7 @@ public class Start {
 }
 
 
-class Clinet{
+class Clinet implements ClinetInterface{
 
     private API api;
 
@@ -43,7 +43,7 @@ class Clinet{
         System.out.println("2 - rent");
         Scanner scanner = new Scanner(System.in);
         switch (scanner.nextInt()){
-            case 1:
+            case 1:createCustomer();
         }
     }
 
@@ -54,9 +54,9 @@ class Clinet{
         obj.put("lname",requestStringInformtion("lname"));
         obj.put("dob",requestStringInformtion("dob"));
         obj.put("address",requestStringInformtion("address"));
-        obj.put("accessPlan",requestStringInformtion("address"));
-        obj.put("cardType",requestStringInformtion("address"));
-        obj.put("cardNumber",requestStringInformtion("address"));
+        obj.put("accessPlan",requestStringInformtion("accessPlan"));
+        obj.put("cardType",requestStringInformtion("cardType"));
+        obj.put("cardNumber",requestStringInformtion("cardNumber"));
         api.request(obj);
 
 
@@ -81,4 +81,18 @@ class Clinet{
         return scan.nextInt();
     }
 
+    @Override
+    public void response(JSONObject object) {
+        System.out.println("response");
+        Scanner scanner = new Scanner(System.in);
+        switch (scanner.nextInt()){
+            case 1:if(object.getBoolean("success")){
+                System.out.println("success");
+                System.out.println("customer ID " + object.getString("customerID"));
+            }else{
+                System.out.println("unsuccessfuly");
+                System.out.println("error" + object.getString("error"));
+            }
+        }
+    }
 }

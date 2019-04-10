@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
+import org.json.JSONObject;
 
-public class ClinetInterface {
+public interface ClinetInterface {
+
+    void response(JSONObject object);
+
 }
