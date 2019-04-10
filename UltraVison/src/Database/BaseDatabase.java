@@ -13,14 +13,14 @@ import java.sql.SQLException;
  * The Template a class that controls accessing the database must abide by to work with system.
  */
 
-public abstract class BaseDatabase {
+public interface BaseDatabase {
 
-    protected static final int MAX_NUMBER_OF_DISPLAYED_TITLES = 100;
+    public static final int MAX_NUMBER_OF_DISPLAYED_TITLES = 100;
 
-    protected DatabaseCommands commands = new DatabaseCommands();
 
     /**
      * Will update rental to show that it is not active will then show that title is back into system
+<<<<<<< HEAD
      * @param productID
      * @return
      * @throws SQLException
@@ -39,6 +39,24 @@ public abstract class BaseDatabase {
 
 
     public abstract void rentWithLoyaltyPoints(int titleID, int customerID,String dateRented,String due) throws SQLException;
+=======
+     *
+     * @param title
+     * @return
+     * @throws SQLException
+     */
+    public boolean returnRental(Title title) throws SQLException;
+
+    /**
+     * Will Create a Entry of the Rental and also update title
+     *
+     * @param title
+     * @param customer
+     * @return
+     * @throws SQLException
+     */
+    public boolean rent(Title title, Customer customer) throws SQLException;
+>>>>>>> 6187c6674570ebebb9a36a09791419f0db2dddaf
 
     /**
      * Allows the customer to search all titles
@@ -46,7 +64,7 @@ public abstract class BaseDatabase {
      * @return
      * @throws SQLException
      */
-    public abstract Title[] ListAvailableTitles() throws SQLException;
+    public Title[] ListAvailableTitles() throws SQLException;
 
     /**
      * Allows the customer to search based of type
@@ -55,7 +73,7 @@ public abstract class BaseDatabase {
      * @return
      * @throws SQLException
      */
-    public abstract Title[] ListAvailableTitles(ProductType type) throws SQLException;
+    public Title[] ListAvailableTitles(ProductType type) throws SQLException;
 
     /**
      * Will create a database Entry for the customer then return the ID
@@ -68,6 +86,7 @@ public abstract class BaseDatabase {
      * @param accessPlan
      * @return
      */
+<<<<<<< HEAD
     public abstract int registerCustomer(String fname, String lname, String DOB, String address, Card card, AccessPlan accessPlan) throws SQLException;
 
     /**
@@ -133,10 +152,17 @@ final class DatabaseCommands {
 
     /**
      * Updates the rental to indicate that it is over
+=======
+    public int registerCustomer(String fname, String lname, String DOB, String address, Card card, AccessPlan accessPlan) throws SQLException;
+
+    /**
+     * To fill InternalSystem with Information of the customer
+>>>>>>> 6187c6674570ebebb9a36a09791419f0db2dddaf
      *
-     * @param titleID
+     * @param CustomerID
      * @return
      */
+<<<<<<< HEAD
     public String updateRental(int titleID,String dateReturned) {
         String sql = "UPDATE rentals SET dateReturned = \"%s\",returned = 1 WHERE title_ID = %d;";
         return String.format(sql, dateReturned, titleID);
@@ -196,6 +222,25 @@ final class DatabaseCommands {
     }
 
 
+=======
+//    public Customer getCustomerData(String CustomerID) throws SQLException;
+//
+//    /**
+//     * To get information about a title
+//     *
+//     * @param titleID
+//     * @return
+//     */
+//    public Title getTitleInformation(String titleID);
+//
+//    /**
+//     * To get Information About a rental
+//     *
+//     * @param titleID
+//     * @return
+//     */
+//    public Rental getRentalInformation(String titleID);
+>>>>>>> 6187c6674570ebebb9a36a09791419f0db2dddaf
 
 
 }

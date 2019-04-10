@@ -13,12 +13,14 @@ import errors.InvalidCard;
 
 import java.sql.*;
 
-public class SQLite extends BaseDatabase {
+public class SQLite implements BaseDatabase {
 
     private Connection connection = null;
+    private DatabaseCommands commands;
 
     public SQLite() throws Exception {
         if (!this.connectToDatabase()) throw new Exception("Can not connect to database");
+        this.commands = new DatabaseCommands();
     }
 
 
@@ -87,7 +89,6 @@ public class SQLite extends BaseDatabase {
                 ProductType.IndentifyFromString(rs.getString("yearOfRelease")),
                 rented);
     }
-
 
 
     @Override
