@@ -1,7 +1,6 @@
 package Customer.AccessPlans;
 
 import Titles.ProductType;
-import errors.CouldNotFindAccessPlan;
 
 import java.math.BigDecimal;
 
@@ -66,13 +65,4 @@ public enum AccessPlan {
         return maxRentals;
     }
 
-    public static AccessPlan getTypeFromString(String accessPlanName) throws CouldNotFindAccessPlan {
-        switch (accessPlanName.toLowerCase()){
-            case "Music Lover":return AccessPlan.ML;
-            case "Premium":return  AccessPlan.PR;
-            case "TV lovers":return  AccessPlan.TV;
-            case "Video Lover":return  AccessPlan.VL;
-            default:throw new CouldNotFindAccessPlan();
-        }
-    }
 }

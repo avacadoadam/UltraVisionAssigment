@@ -1,15 +1,10 @@
 package API;
 
-import Customer.AccessPlans.AccessPlan;
-import Customer.Card.Card;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -23,12 +18,12 @@ import java.util.concurrent.Executors;
 public class SocketAPI implements Runnable {
 
     private ServerSocket socket;
-    private InternalSystem system;
+    private Presenter system;
     private static boolean SERVER_ON = true;
     private static final int PORT = 3234;
     private ExecutorService pool = Executors.newFixedThreadPool(20);
 
-    public SocketAPI(System system) {
+    public SocketAPI(Presenter system) {
         this.system = system;
         try {
             this.socket = new ServerSocket(PORT);
@@ -49,10 +44,10 @@ public class SocketAPI implements Runnable {
                 ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
                 ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream());
 
-
-                while (in.hasNextLine()) {
-                    out.println(in.nextLine().toUpperCase());
-                }
+//
+//                while (in.hasNextLine()) {
+//                    out.println(in.nextLine().toUpperCase());
+//                }
 //                this.pool.execute();
 
             } catch (IOException e) {

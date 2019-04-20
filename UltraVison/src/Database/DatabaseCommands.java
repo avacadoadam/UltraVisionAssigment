@@ -54,6 +54,11 @@ public class DatabaseCommands {
         return String.format(sql, getDate(), titleID);
     }
 
+    public String updateLoyaltyPoints(int customerID, int amount) {
+        String sql = "UPDATE customer SET loyaltyPoints  = loyaltyPoints + %d WHERE ID = %d;";
+        return String.format(sql, amount, customerID);
+    }
+
     public String getAllAvaibleTitles() {
         return "SELECT * FROM title WHERE rented = 0";
     }
@@ -92,6 +97,21 @@ public class DatabaseCommands {
     public String changeCustomerCardType(int customerID, String cardType) {
         String sql = "UPDATE customer SET cardType = \"%s\" WHERE ID = %d;";
         return String.format(sql, cardType, customerID);
+    }
+
+    public String getCustomerInformation(int customerID) {
+        String sql = "SELECT * FROM customer WHERE ID = %d;";
+        return String.format(sql, customerID);
+    }
+
+    public String getProductInformation(int productID) {
+        String sql = "SELECT * FROM title WHERE ID = %d;";
+        return String.format(sql, productID);
+    }
+
+    public String getNumberOfRentals(int customerID) {
+        String sql = "SELECT COUNT(ID) FROM rentals WHERE returned = 0 AND customer_ID = %d;";
+        return String.format(sql, customerID);
     }
 
 

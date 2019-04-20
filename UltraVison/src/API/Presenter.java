@@ -40,11 +40,9 @@ public class Presenter   {
         if (!validateLame(lname)) throw new CustomerAccountInformationError("last name cannot contain numbers");
         //checks accessplan
         AccessPlan plan;
-        try {
-            plan = AccessPlan.getTypeFromString(accessPlan);
-        } catch (CouldNotFindAccessPlan couldNotFindAccessPlan) {
-            throw new CustomerAccountInformationError("Could not find that access plan");
-        }
+
+        plan = AccessPlan.valueOf(accessPlan);
+
         //checks date of birth
         try {
             TimeConversions.ConvertDOB(DOB);

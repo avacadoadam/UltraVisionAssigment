@@ -3,13 +3,10 @@ package Database;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
 import Customer.Customer;
-import Rental.Rental;
 import Titles.ProductType;
 import Titles.Title;
-import Conversions.TimeConversions;
 import errors.CouldNotFindAccessPlan;
 import errors.InvalidCard;
-
 
 import java.sql.*;
 
@@ -29,7 +26,7 @@ public class SQLite implements BaseDatabase {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
         statement.executeUpdate(this.commands.updateTitleRented(productID, false));
-        statement.executeUpdate(this.commands.updateRental(productID,TimeConversions.returnTodayDate()));
+        statement.executeUpdate(this.commands.updateRental(productID));
         return true;
     }
 
@@ -37,7 +34,7 @@ public class SQLite implements BaseDatabase {
     public void rent(int productID, int customerID, String dateRented, String due) throws SQLException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        statement.executeUpdate(this.commands.createRental(customerID, productID, dateRented, due));
+        statement.executeUpdate(this.commands.createRental(customerID, productID));
         statement.executeUpdate(this.commands.updateTitleRented(productID, true));
     }
 
@@ -70,7 +67,7 @@ public class SQLite implements BaseDatabase {
                 rs.getInt("ID"),
                 rs.getString("fName"),
                 NumOfRentals,
-                AccessPlan.getTypeFromString(rs.getString("accessPlan")),
+                AccessPlan.valueOf(rs.getString("accessPlan")),
                 Card.CardFactory(rs.getString("cardType"),new Long(rs.getString("cardNumber"))),
                 rs.getInt("loyaltyPoints"));
 
@@ -141,8 +138,7 @@ public class SQLite implements BaseDatabase {
 
         try {
             // create a database connection
-
-            this.connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\avaca\\Desktop\\Assigment\\UltraVison\\src\\ultraVision.db");
+            this.connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\avaca\\Desktop\\Ultra Vision Assigment\\UltraVison\\src\\ultraVision.db");
             return true;
 
         } catch (SQLException e) {

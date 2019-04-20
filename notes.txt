@@ -53,7 +53,6 @@ FINISH API, APPLICATION PROTOCOL,PRESENTER
 The ViewPresenterSocket:
 shoudl be a interface so the genral system can be preserved if upgraded to a
 HTTP web based system.
->>>>>>> 6187c6674570ebebb9a36a09791419f0db2dddaf
 
 task
 read TDD test driven development

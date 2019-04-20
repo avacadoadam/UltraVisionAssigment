@@ -22,11 +22,7 @@ public class Start {
 
         Clinet clinet = new Clinet(api);
     }
-
-
-
 }
-
 
 class Clinet implements ClinetInterface{
 
@@ -58,16 +54,7 @@ class Clinet implements ClinetInterface{
         obj.put("cardType",requestStringInformtion("cardType"));
         obj.put("cardNumber",requestStringInformtion("cardNumber"));
         api.request(obj);
-
-
-
 //        String fname, String lname, String DOB, String address, AccessPlan accessPlan, Card card
-
-
-
-
-
-
     }
 
     private String requestStringInformtion(String request){
