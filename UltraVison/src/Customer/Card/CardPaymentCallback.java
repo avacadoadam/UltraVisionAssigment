@@ -8,7 +8,7 @@ public interface CardPaymentCallback {
 
     void successfullyPayment();
 
-    void unsuccessfulyPayment();
+    void unsuccessfulPayment();
 
 
 

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class Visa extends Card {
 
 
-    public Visa(Long cardNumber) throws InvalidCard {
+     Visa(Long cardNumber) throws InvalidCard {
         super(cardNumber, "Visa Card");
     }
 
@@ -16,7 +16,7 @@ public class Visa extends Card {
     public void requestRefund(BigDecimal amountEuros, CardPaymentCallback callback) {
         boolean b = true;
         if (b) callback.successfullyPayment();
-        else callback.unsuccessfulyPayment();
+        else callback.unsuccessfulPayment();
 
     }
 
@@ -24,7 +24,7 @@ public class Visa extends Card {
     public void requestPayment(BigDecimal amountEuros, CardPaymentCallback callback) {
         boolean b = true;
         if (b) callback.successfullyPayment();
-        else callback.unsuccessfulyPayment();
+        else callback.unsuccessfulPayment();
 
     }
 

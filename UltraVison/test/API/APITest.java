@@ -1,25 +1,21 @@
 package API;
 
 import Database.BaseDatabase;
-import Database.SQLite;
+import errors.CardSecurityError;
+import errors.CustomerAccountInformationError;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -32,6 +28,13 @@ public class APITest {
 
     JSONObject inCorrectCommand = new JSONObject();
     JSONObject commandIsINT= new JSONObject();
+    @Mock
+    JSONObject mockObj;
+    @Mock BaseDatabase MockDB;
+    @Mock Presenter mockPresenter;
+
+    @Spy
+    API api = new API(mockPresenter);
 
 
     @Before
@@ -43,40 +46,59 @@ public class APITest {
         inCorrectCommand.put("command","wrong");
 
         commandIsINT.put("command",1);
-
-    }
-    @Mock
-    List<String> mockedList;
-
-    @Test
-    public void whenUseMockAnnotation_thenMockIsInjected() {
-        mockedList.add("one");
-        System.out.println(mockedList.size() + "size");
-        System.out.println(mockedList.get(0) + "value at 0");
-        verify(mockedList).add("one");
-        assertEquals(0, mockedList.size());
-
-        when(mockedList.size()).thenReturn(23);
-        System.out.println(mockedList.size() + " size");
-        assertEquals(23, mockedList.size());
     }
 
-    @Mock
-    JSONObject mockObj;
-    @Mock BaseDatabase MockDB;
-    @Mock Presenter MockPresenter;
-    @Mock API mockAPI;
+
     @Test
     public void testIncorrectCommand(){
         //Arrange
         when(mockObj.getString("command")).thenReturn("invalidCommand");
-        System.out.println(mockObj.getString("command"));
-        doNothing().when(mockAPI).request(mockObj);
+
+        api.request(mockObj);
         //vertify
-        verify(mockAPI, times(4)).sendError(anyString());
-        verify(mockAPI, times(4)).output(anyObject());
+//        verify(mockAPI, times(1)).request(anyObject());
+        verify(api).sendError(anyString());
+    }
 
+    @Test
+    public void testIncorrectDataType(){
+         when(mockObj.getString("command")).thenThrow(new JSONException("incorrect data type"));
+    }
+    @Captor
+    ArgumentCaptor<JSONObject> captor;
+    @Test
+    public void testCreateCustomer(){
+        int newCustomerID= 3;
+        when(mockObj.getString("command")).thenReturn("createcustomer");
+        when(mockObj.getString("fname")).thenReturn("adam");
+        when(mockObj.getString("lname")).thenReturn("sever");
+        when(mockObj.getString("DOB")).thenReturn("1998/09/02");
+        when(mockObj.getString("address")).thenReturn("Castle Curragh park 45");
+        when(mockObj.getString("CardType")).thenReturn("credit");
+        when(mockObj.getString("cardNumber")).thenReturn("5555555555554444");
+        when(mockObj.getString("accessPlan")).thenReturn("Premium");
+        try {
+            when(mockPresenter.newCustomer(anyString(),anyString(),anyString(),anyString(),anyString(),anyString(),anyString())).thenReturn(newCustomerID);
+            api.request(mockObj);
+//            verify(mockPresenter).newCustomer(mockObj.getString("fname"),
+//                    mockObj.getString("lname"),
+//                    mockObj.getString("DOB"),
+//                    mockObj.getString("address"),
+//                    mockObj.getString("CardType"),
+//                    mockObj.getString("cardNumber"),
+//                    mockObj.getString("accessPlan"));
 
+            verify(api).output(captor.capture());
+            assertEquals(captor.getValue().getString("success"), ("true"));
+            assertEquals(captor.getValue().getString("customerID"), ("newCustomerID"));
+
+        } catch (CustomerAccountInformationError customerAccountInformationError) {
+            customerAccountInformationError.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (CardSecurityError cardSecurityError) {
+            cardSecurityError.printStackTrace();
+        }
     }
 
     @Test

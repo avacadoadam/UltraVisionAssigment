@@ -1,18 +1,17 @@
 package Titles;
 
-import java.util.Calendar;
 import java.util.Date;
 
 public class Title {
 
     private int titleID;
     private String titleName;
-    private String yearOfRelease;
+    private Date yearOfRelease;
     private ProductType productType;
     private boolean rented;
 
 
-    public Title(int titleID, String titleName, String yearOfRelease, ProductType productType, boolean rented) {
+    public Title(int titleID, String titleName, Date yearOfRelease, ProductType productType, boolean rented) {
         this.titleID = titleID;
         this.titleName = titleName;
         this.yearOfRelease = yearOfRelease;
@@ -28,7 +27,7 @@ public class Title {
         return titleName;
     }
 
-    public String getYearOfRelease() {
+    public Date getYearOfRelease() {
         return yearOfRelease;
     }
 

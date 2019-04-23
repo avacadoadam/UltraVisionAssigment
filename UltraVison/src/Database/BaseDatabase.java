@@ -3,9 +3,9 @@ package Database;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
 import Customer.Customer;
+import Rental.Rental;
 import Titles.ProductType;
 import Titles.Title;
-import errors.CouldNotFindAccessPlan;
 import errors.InvalidCard;
 
 import java.sql.SQLException;
@@ -75,16 +75,24 @@ public interface BaseDatabase {
      * @param CustomerID
      * @return
      */
-    Customer getCustomerData(int CustomerID) throws SQLException, CouldNotFindAccessPlan, InvalidCard;
+    Customer getCustomerData(int CustomerID) throws SQLException, InvalidCard;
 
     /**
      * To get information about a title
      * @param titleID
      * @return
      */
-    Title getTitleInformation(int titleID) throws SQLException;
+    Title getTitleInformation(int titleID) throws Exception;
 
+    Rental getRentalInformation(int rentalID) throws Exception;
 
+    void updateCustomerLoyaltyPoints(int customerID, int amount) throws SQLException;
+
+    int createNewTitle(Title title) throws SQLException;
+
+    boolean updateCustomerAccessPlan(int CustomerID,AccessPlan accessPlan) throws SQLException;
+    boolean updateCustomerAddress(int CustomerID,String address) throws SQLException;
+    boolean updateCustomerCard(int CustomerID,Card card) throws SQLException;
 
 
 }

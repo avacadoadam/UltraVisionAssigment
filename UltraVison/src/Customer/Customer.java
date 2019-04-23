@@ -31,9 +31,9 @@ public class Customer {
      * First Ensures customer is under Max Rental then checks if there is the memberShipCard has enough loyalty points
      * @return true if can be rented
      */
-    public boolean rentWithLoyalityPoints() {
+    public boolean rentWithLoyaltyPoints() {
         if (checkUnderMaxRentals()) {
-            return this.membershipCard.canRentWithLoyalityPoints();
+            return this.membershipCard.canRentWithLoyaltyPoints();
         }
         return false;
     }
@@ -44,7 +44,7 @@ public class Customer {
      */
     public boolean rentWithMemebershipCard(Title title) {
         if (checkUnderMaxRentals()) {
-            return this.membershipCard.canRentWtithAccessLevel(title.getProductType());
+            return this.membershipCard.canRentWithAccessLevel(title.getProductType());
         }
         return false;
     }
@@ -70,5 +70,7 @@ public class Customer {
         return !lname.contains("[0-9]+");
     }
 
-
+    public MembershipCard getMembershipCard() {
+        return membershipCard;
+    }
 }

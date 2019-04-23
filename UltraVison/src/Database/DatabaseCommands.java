@@ -49,7 +49,7 @@ public class DatabaseCommands {
      * @param titleID
      * @return
      */
-    public String updateRental(int titleID) {
+    public String updateRentalToReturned(int titleID) {
         String sql = "UPDATE rentals SET dateReturned = \"%s\",returned = 1 WHERE title_ID = %d;";
         return String.format(sql, getDate(), titleID);
     }
@@ -70,7 +70,7 @@ public class DatabaseCommands {
 
 
     public String getNumberOfActiveRentals(int customerID) {
-        String sql = "SELECT COUNT(ID) FROM rentals WHERE customer_ID = %d AND returned = 0;";
+        String sql = "SELECT COUNT(ID) as NumOfRentals FROM rentals WHERE customer_ID = %d AND returned = 0;";
         return String.format(sql, customerID);
     }
 
@@ -108,14 +108,6 @@ public class DatabaseCommands {
         String sql = "SELECT * FROM title WHERE ID = %d;";
         return String.format(sql, productID);
     }
-
-    public String getNumberOfRentals(int customerID) {
-        String sql = "SELECT COUNT(ID) FROM rentals WHERE returned = 0 AND customer_ID = %d;";
-        return String.format(sql, customerID);
-    }
-
-
-
     private String getDate() {
         Calendar cal = Calendar.getInstance();
         return cal.getTime().toString();

@@ -21,7 +21,7 @@ public enum ProductType {
     * @param productType
     * @return correct type of ProductType
     */
-   public static ProductType IndentifyFromString(String productType){
+   public static ProductType IdentifyFromString(String productType){
       switch (productType.toLowerCase()){
          case "music":return ProductType.Music;
          case "video":return ProductType.Video;
@@ -29,4 +29,8 @@ public enum ProductType {
          default: return null;
       }
    }
+
+
+
+
 }

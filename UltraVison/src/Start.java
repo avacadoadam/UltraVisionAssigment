@@ -24,7 +24,7 @@ public class Start {
     }
 }
 
-class Clinet implements ClinetInterface{
+class Clinet {
 
     private API api;
 
@@ -54,7 +54,6 @@ class Clinet implements ClinetInterface{
         obj.put("cardType",requestStringInformtion("cardType"));
         obj.put("cardNumber",requestStringInformtion("cardNumber"));
         api.request(obj);
-//        String fname, String lname, String DOB, String address, AccessPlan accessPlan, Card card
     }
 
     private String requestStringInformtion(String request){
@@ -68,7 +67,6 @@ class Clinet implements ClinetInterface{
         return scan.nextInt();
     }
 
-    @Override
     public void response(JSONObject object) {
         System.out.println("response");
         Scanner scanner = new Scanner(System.in);

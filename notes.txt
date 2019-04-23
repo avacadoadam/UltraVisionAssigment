@@ -11,14 +11,9 @@
 - the system should init the databse if the Information is not there
 -ensure system is thread safe
 -customer may not rent if he has a overdue rental
--customer may not rent if is loyality points are neagtive
-<<<<<<< HEAD
--customer can not rent if he has over due rentals!!!!!!!!!!!!!!!!!!!!!
-=======
 -A system can change Database or view with no problems to Presenter
 - Validates data in View, further in Presenter and also could implement in Modal
-
->>>>>>> 6187c6674570ebebb9a36a09791419f0db2dddaf
+- Customer will be charge 50 cent per day he/she is late
 
 Testing ---
 Ensure proper ID is given from updateStatement;class :SQLite method ::registerCustomer

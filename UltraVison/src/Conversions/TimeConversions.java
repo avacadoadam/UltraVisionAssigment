@@ -4,9 +4,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -34,11 +34,17 @@ public final class TimeConversions {
         LocalDate due = LocalDate.parse(dueDate,formmat);
         return ChronoUnit.DAYS.between(due,now);
     }
+    public static long numberOfDaysLate(Date dueDate) {
+        LocalDate now = LocalDate.now();
+        LocalDate date = dueDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        return ChronoUnit.DAYS.between(date, now);
+    }
 
 
 
 
-    public static Date ConvertDOB(String date) throws Exception {
+
+        public static Date ConvertDOB(String date) throws Exception {
         SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         dateFormat.setLenient(false);
         try {

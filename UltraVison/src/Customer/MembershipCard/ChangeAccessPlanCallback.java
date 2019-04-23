@@ -2,7 +2,7 @@ package Customer.MembershipCard;
 
 public interface ChangeAccessPlanCallback {
 
-    void successfull();
+    void successful();
     void unsuccessfull();
 
 }
