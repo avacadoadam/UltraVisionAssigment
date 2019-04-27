@@ -13,7 +13,6 @@ import errors.*;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
-import java.time.temporal.ChronoUnit;
 
 import static Customer.Customer.validateFname;
 import static Customer.Customer.validateLame;
@@ -57,7 +56,7 @@ public class Presenter {
         //checks card information
         Card card;
         try {
-            Long cardNumber = new Long(cardNum);
+            Long cardNumber = Long.valueOf(cardNum);
             card = Card.CardFactory(cardType, cardNumber);
         } catch (InvalidCard invalidCard) {
             throw new CustomerAccountInformationError(invalidCard.getMessage());
@@ -124,7 +123,6 @@ public class Presenter {
     }
 
     public int createTitle(String titleName,String typeOfMovie,String yearOfRelease) throws Exception {
-
        return database.createNewTitle(new Title(0,titleName,
                 TimeConversions.ConvertDOB(yearOfRelease),
                 ProductType.IdentifyFromString(typeOfMovie),

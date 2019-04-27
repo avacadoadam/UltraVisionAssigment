@@ -10,25 +10,27 @@ public class Start {
 
 
     public static void main(String[] args) {
-        BaseDatabase database = null;
+
         try {
-            database = new SQLite();
+            BaseDatabase database = new SQLite();
+            Presenter presenter = new Presenter(database);
+            API api = new API(presenter);
+            new Client(api);
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(2);
         }
-        Presenter presenter = new Presenter(database);
-        API api = new API(presenter);
 
-        Clinet clinet = new Clinet(api);
+
+
     }
 }
 
-class Clinet {
+class Client {
 
     private API api;
 
-    public Clinet(API api) {
+    Client(API api) {
         this.api = api;
         chooseOption();
     }

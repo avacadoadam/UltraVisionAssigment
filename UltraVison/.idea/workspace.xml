@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/API/API.java" line="187" />
+    <bookmark url="file://$PROJECT_DIR$/src/API/API.java" line="191" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1af3c186-0421-4a6b-9e08-7f7880dda976" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/errors/AccessLevelCantRent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../API doc.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/../API doc.rtf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/CreateTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/CreateUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/RentWithAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/RequestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/Requests/ReturnRental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/API.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/API.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/APIInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/APIInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/Presenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/Presenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Clinet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Clinet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/ClinetInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/SocketAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/SocketAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Clinet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Conversions/TimeConversions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Conversions/TimeConversions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Card.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CardPaymentCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CardPaymentCallback.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CreditCard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/DebitCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/DebitCard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Visa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Visa.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/ChangeAccessPlanCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/ChangeAccessPlanCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/MembershipCard$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/MembershipCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/MembershipCard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Database/BaseDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Database/BaseDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Database/DatabaseCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Database/DatabaseCommands.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Database/SQLite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Database/SQLite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/META-INF/UltraVison.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Rental/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Rental/Rental.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Start.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Titles/ProductType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Titles/ProductType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Titles/Title.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Titles/Title.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/CouldNotFindAccessPlan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/UltraVison/API/APITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/UltraVison/API/APITest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/AccessLevelCantRent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/AccessLevelCantRent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/CardSecurityError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/CardSecurityError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/CustomerAccountInformationError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/CustomerAccountInformationError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/InsuffientLoyaltyPoints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/InsuffientLoyaltyPoints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/InvalidCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/InvalidCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/UltraVison/API/APITest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/UltraVison/API/PresenterTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/APIInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClinetInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conversions/TimeConversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conversions/TimeConversions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/Card/CardPaymentCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/Card/CardPaymentCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/Card/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/Card/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/Card/DebitCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/Card/DebitCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/Card/Visa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/Card/Visa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/MembershipCard/ChangeAccessPlanCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/MembershipCard/ChangeAccessPlanCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer/MembershipCard/MembershipCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer/MembershipCard/MembershipCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/BaseDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/BaseDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/SQLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/SQLite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rental/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rental/Rental.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Titles/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Titles/ProductType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Titles/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Titles/Title.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/CouldNotFindAccessPlan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenterInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/API/APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/API/APITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../notes.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,16 +63,119 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Database/SQLite.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="188" column="5" lean-forward="true" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/API.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3213">
+              <caret line="193" selection-start-line="193" selection-end-line="193" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/Request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/RequestFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/ReturnRental.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#359#360#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,21 +210,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/System/GenericInterface.java" />
-        <option value="$PROJECT_DIR$/src/Customer/MembershipCard/GenericInterface.java" />
-        <option value="$PROJECT_DIR$/src/Customer/MembershipCard/ChangeAccessPlanCallback.java" />
-        <option value="$PROJECT_DIR$/src/Customer/AccessPlans/ML.java" />
-        <option value="$PROJECT_DIR$/src/Customer/AccessPlans/PR.java" />
-        <option value="$PROJECT_DIR$/src/Customer/AccessPlans/TV.java" />
-        <option value="$PROJECT_DIR$/src/Customer/AccessPlans/VL.java" />
-        <option value="$PROJECT_DIR$/src/Database/DatabaseInterface.java" />
-        <option value="$PROJECT_DIR$/src/System/API.java" />
-        <option value="$PROJECT_DIR$/src/Customer/Card/cardFunctions.java" />
         <option value="$PROJECT_DIR$/src/Database/Mysql.java" />
         <option value="$PROJECT_DIR$/src/TimeConversions.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/CardType.java" />
         <option value="$PROJECT_DIR$/src/Rental/Rentals.java" />
-        <option value="$PROJECT_DIR$/src/API/APIInterface.java" />
         <option value="$PROJECT_DIR$/src/API/ViewInterface.java" />
         <option value="$PROJECT_DIR$/src/errors/CustomerAccountInformationError.java" />
         <option value="$PROJECT_DIR$/src/errors/CouldNotFindAccessPlan.java" />
@@ -141,7 +231,6 @@
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/presenterInterface.java" />
         <option value="$PROJECT_DIR$/test/API/APITest.java" />
-        <option value="$PROJECT_DIR$/src/Start.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/CardPaymentCallback.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/DebitCard.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/CreditCard.java" />
@@ -155,19 +244,29 @@
         <option value="$PROJECT_DIR$/src/Titles/Title.java" />
         <option value="$PROJECT_DIR$/src/Customer/MembershipCard/MembershipCard.java" />
         <option value="$PROJECT_DIR$/src/Database/BaseDatabase.java" />
-        <option value="$PROJECT_DIR$/src/API/Presenter.java" />
-        <option value="$PROJECT_DIR$/src/API/API.java" />
         <option value="$PROJECT_DIR$/src/Database/SQLite.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/testBuilder.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/testBuilderBuilder.java" />
+        <option value="$PROJECT_DIR$/src/Start.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests.java" />
+        <option value="$PROJECT_DIR$/src/API/Request.java" />
+        <option value="$PROJECT_DIR$/src/API/APIInterface.java" />
+        <option value="$PROJECT_DIR$/src/API/Presenter.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/RequestFactory.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/Request.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/CreateUser.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/CreateTitle.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/RentWithAccess.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/ReturnRental.java" />
+        <option value="$PROJECT_DIR$/src/API/API.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="-14" />
-    <option name="width" value="3864" />
-    <option name="height" value="2114" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -193,6 +292,19 @@
               <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="API" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="API" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Requests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Conversions" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -206,7 +318,32 @@
               <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Customer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AccessPlans" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Customer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Card" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Database" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Titles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Start.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -287,7 +424,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mockito-all-2.0.2-beta.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -299,6 +436,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="API.Requests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -313,7 +453,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.APITest.testCreateCustomer">
+  <component name="RunManager" selected="Application.Start">
     <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Start" />
       <module name="UltraVison" />
@@ -325,7 +465,7 @@
       <module name="UltraVison" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.*" />
+          <option name="PATTERN" value="API.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -341,7 +481,7 @@
       <module name="UltraVison" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.*" />
+          <option name="PATTERN" value="API.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -357,7 +497,7 @@
       <module name="UltraVison" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.*" />
+          <option name="PATTERN" value="API.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -373,7 +513,7 @@
       <module name="UltraVison" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.*" />
+          <option name="PATTERN" value="API.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -394,11 +534,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Start" />
         <item itemvalue="JUnit.APITest.testCreateCustomer" />
         <item itemvalue="JUnit.APITest.testIncorrectDataType" />
         <item itemvalue="JUnit.APITest.testIncorrectCommand" />
         <item itemvalue="JUnit.APITest.whenUseMockAnnotation_thenMockIsInjected" />
-        <item itemvalue="Application.Start" />
       </list>
     </recent_temporary>
   </component>
@@ -456,17 +596,17 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2208" height="1208" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15241636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15582451" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32901135" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.36714977" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3273906" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.34986946" />
@@ -480,7 +620,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.32961932" />
       <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32992566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Maven" order="5" />
@@ -489,37 +629,6 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Codota" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.151487" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32961932" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3277623" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.34986946" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39925718" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.32961932" />
-      <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32992566" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Codota" order="9" />
-    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -540,84 +649,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/API/API.java</url>
-          <line>44</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/API/API.java</url>
-          <line>35</line>
+          <line>30</line>
           <properties class="API.API" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../json-20180813.jar!/org/json/JSONArray.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Customer/Card/CardType.java" />
-    <entry file="file://$PROJECT_DIR$/src/errors/CouldNotFindAccessPlan.java" />
-    <entry file="file://$PROJECT_DIR$/src/errors/CustomerAccountInformationError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/errors/InvalidCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/errors/CardSecurityError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/errors/InsuffientLoyaltyPoints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/PresenterInterface.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="12" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
     <entry file="jar://$PROJECT_DIR$/../mockito-all-2.0.2-beta.jar!/org/mockito/Mockito.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26044">
@@ -639,34 +690,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
     <entry file="jar://$PROJECT_DIR$/../json-20180813.jar!/org/json/JSONObject.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="382" column="18" selection-start-line="382" selection-start-column="18" selection-end-line="382" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/API/PresenterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,26 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/SocketAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Customer/AccessPlans/AccessPlan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -711,23 +720,6 @@
             <element signature="method#sumOfOddPlace#0;class#Card#0" />
             <element signature="method#getSize#0;class#Card#0" />
             <element signature="method#getPrefix#0;class#Card#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Customer/Card/CardPaymentCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Customer/Card/CreditCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -752,171 +744,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="360" column="14" selection-start-line="360" selection-start-column="14" selection-end-line="360" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/time/temporal/ChronoUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="978">
-          <caret line="270" column="29" lean-forward="true" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/time/temporal/Temporal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4593">
-          <caret line="467" column="12" selection-start-line="467" selection-start-column="12" selection-end-line="467" selection-end-column="12" />
-          <folding>
-            <element signature="e#15963#15964#0" expanded="true" />
-            <element signature="e#16031#16032#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/APIInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Date.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/text/DateFormat.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/time/temporal/ChronoUnit.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/time/temporal/Temporal.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/time/LocalDate.java" />
     <entry file="file://$PROJECT_DIR$/src/errors/AccessLevelCantRent.java" />
-    <entry file="file://$PROJECT_DIR$/src/Customer/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1948#1949#0" expanded="true" />
-            <element signature="e#2273#2274#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="375" column="18" selection-start-line="375" selection-start-column="18" selection-end-line="375" selection-end-column="18" />
-          <folding>
-            <element signature="e#15711#15712#0" expanded="true" />
-            <element signature="e#15747#15748#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rental/Rental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Titles/ProductType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Titles/Title.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Conversions/TimeConversions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/sql/Statement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Throwable.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/sql/Statement.java" />
     <entry file="file://$PROJECT_DIR$/src/Database/BaseDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1046">
           <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="151" column="36" lean-forward="true" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/API.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#sendErrors#0;class#API#0" />
           </folding>
         </state>
       </provider>
@@ -931,21 +772,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java" />
+    <entry file="file://$PROJECT_DIR$/src/Customer/Card/testBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/Customer/Card/testBuilderBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/Customer/AccessPlans/AccessPlan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        <state relative-caret-position="408">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Customer/Card/testBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/Customer/Card/testBuilderBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/Database/SQLite.java">
+    <entry file="file://$PROJECT_DIR$/src/Customer/Card/CardPaymentCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="188" column="5" lean-forward="true" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Customer/Card/CreditCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Customer/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#1863#1864#0" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#2273#2274#0" expanded="true" />
+            <element signature="e#2310#2311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Titles/ProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Titles/Title.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rental/Rental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Conversions/TimeConversions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/SQLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-716">
+          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/API/PresenterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/SocketAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/APIInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/RequestFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="193" selection-start-line="193" selection-end-line="193" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/ReturnRental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1007,7 +1059,17 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
