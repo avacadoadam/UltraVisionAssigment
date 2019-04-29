@@ -9,6 +9,8 @@ import Titles.Title;
 import errors.InvalidCard;
 
 import java.sql.SQLException;
+import java.text.ParseException;
+
 /**
  * The Template a class that controls accessing the database must abide by to work with system.
  */
@@ -82,9 +84,9 @@ public interface BaseDatabase {
      * @param titleID
      * @return
      */
-    Title getTitleInformation(int titleID) throws Exception;
+    Title getTitleInformation(int titleID) throws SQLException, ParseException;
 
-    Rental getRentalInformation(int rentalID) throws Exception;
+    Rental getRentalInformation(int rentalID) throws SQLException, ParseException;
 
     void updateCustomerLoyaltyPoints(int customerID, int amount) throws SQLException;
 

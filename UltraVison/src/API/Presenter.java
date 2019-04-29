@@ -4,7 +4,6 @@ import Conversions.TimeConversions;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
 import Customer.Customer;
-import Customer.MembershipCard.ChangeAccessPlanCallback;
 import Database.BaseDatabase;
 import Rental.Rental;
 import Titles.ProductType;
@@ -13,6 +12,7 @@ import errors.*;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
+import java.text.ParseException;
 
 import static Customer.Customer.validateFname;
 import static Customer.Customer.validateLame;
@@ -27,24 +27,27 @@ public class Presenter {
         this.database = database;
     }
 
+
     /**
-     * If any peremters are not set or invalid a CustomerAccountInformationError error will be throw detailing why
+     * If any perimeters are not set or invalid a CustomerAccountInformationError error will be throw detailing why
      * however if the database fails or query fails a SQLException will be thrown
      *
-     * @param fname
-     * @param lname
-     * @param DOB
-     * @param cardNum
-     * @param accessPlan
-     * @return
-     * @throws CustomerAccountInformationError
+     * @param fname first name of customer
+     * @param lname last name of customer
+     * @param DOB   Date of birth of customer
+     * @param cardNum  Card Number of customer
+     * @param accessPlan Access Plan customer choose
+     * @param cardType Type of card customer is registering
+     * @return the ID of customer from database
+     * @throws CustomerAccountInformationError If Customer Information is incorrect
+     * @throws SQLException If connection or query to database failed in some way
+     * @throws CardSecurityError  If there was a problem with card details
      */
     public int newCustomer(String fname, String lname, String DOB, String address, String cardType, String cardNum, String accessPlan) throws CustomerAccountInformationError, SQLException, CardSecurityError {
         if (!validateFname(fname)) throw new CustomerAccountInformationError("first name cannot contain numbers");
         if (!validateLame(lname)) throw new CustomerAccountInformationError("last name cannot contain numbers");
         //checks accessplan
         AccessPlan plan;
-
         plan = AccessPlan.valueOf(accessPlan);
 
         //checks date of birth
@@ -70,17 +73,17 @@ public class Presenter {
         }
     }
 
-
     /**
      * Will check if Customer can rent that title with loyality points
      * then update the database returning the return date
-     *
-     * @param customerID
-     * @param productID
-     * @return due date for rental
-     * @throws SQLException
+     * @param customerID ID of customer that will be on his memebership card
+     * @param productID ID of product will be on barcode
+     * @return returns the return date
+     * @throws Exception
+     * @throws InsuffientLoyaltyPoints
+     * @throws InvalidCard
      */
-    public String rentwithloyaltypoints(int customerID, int productID) throws Exception, InsuffientLoyaltyPoints, InvalidCard {
+    public String rentWithLoyaltyPoints(int customerID, int productID) throws InsuffientLoyaltyPoints, InvalidCard, SQLException, ParseException {
         Customer customer = database.getCustomerData(customerID);
         Title product = database.getTitleInformation(productID);
         String returnDate = TimeConversions.returnDate(3);
@@ -92,7 +95,7 @@ public class Presenter {
         return returnDate;
     }
 
-    public String rentOutWithAccessPlan(int customerID, int titleID) throws Exception, InvalidCard, AccessLevelCantRent {
+    public String rentOutWithAccessPlan(int customerID, int titleID) throws SQLException, InvalidCard, AccessLevelCantRent, ParseException {
         Customer customer = database.getCustomerData(customerID);
         Title title = database.getTitleInformation(titleID);
         String returnDate = TimeConversions.returnDate(3);
@@ -106,7 +109,7 @@ public class Presenter {
     }
 
 
-    public boolean returnProduct(int productID) throws Exception, InvalidCard {
+    public boolean returnProduct(int productID) throws SQLException, InvalidCard, CardSecurityError, ParseException {
 
         Rental rental = database.getRentalInformation(productID);
         long dateLate;
@@ -122,7 +125,7 @@ public class Presenter {
         return database.returnRental(productID);
     }
 
-    public int createTitle(String titleName,String typeOfMovie,String yearOfRelease) throws Exception {
+    public int createTitle(String titleName,String typeOfMovie,String yearOfRelease) throws SQLException, ParseException {
        return database.createNewTitle(new Title(0,titleName,
                 TimeConversions.ConvertDOB(yearOfRelease),
                 ProductType.IdentifyFromString(typeOfMovie),

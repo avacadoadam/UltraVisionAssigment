@@ -28,14 +28,6 @@ public class DatabaseCommands {
         return String.format(sql, customerID, titleID, getDate());
     }
 
-    /**
-     * Set a title to either rented or not returned(ie was returned by customer)
-     * This function shoudl be called when a title is placed back into stock
-     *
-     * @param titleID
-     * @param rented
-     * @return
-     */
     public String updateTitleRented(int titleID, boolean rented) {
         int a = 0;
         if (rented) a = 1;
@@ -43,12 +35,6 @@ public class DatabaseCommands {
         return String.format(sql, titleID, a);
     }
 
-    /**
-     * Updates the rental to indicate that it is over
-     *
-     * @param titleID
-     * @return
-     */
     public String updateRentalToReturned(int titleID) {
         String sql = "UPDATE rentals SET dateReturned = \"%s\",returned = 1 WHERE title_ID = %d;";
         return String.format(sql, getDate(), titleID);

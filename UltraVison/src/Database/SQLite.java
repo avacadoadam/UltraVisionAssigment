@@ -10,6 +10,7 @@ import Titles.Title;
 import errors.InvalidCard;
 
 import java.sql.*;
+import java.text.ParseException;
 import java.util.Date;
 
 public class SQLite implements BaseDatabase {
@@ -77,7 +78,7 @@ public class SQLite implements BaseDatabase {
     }
 
     @Override
-    public Title getTitleInformation(int productID) throws Exception {
+    public Title getTitleInformation(int productID) throws SQLException, ParseException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
         ResultSet rs = statement.executeQuery(commands.getProductInformation(productID));
@@ -90,7 +91,7 @@ public class SQLite implements BaseDatabase {
     }
 
     @Override
-    public Rental getRentalInformation(int rentalID) throws Exception {
+    public Rental getRentalInformation(int rentalID) throws SQLException, ParseException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
         ResultSet rs = statement.executeQuery("SELECT * FROM rentals WHERE ID = " + rentalID + ";");

@@ -17,7 +17,7 @@ public class RentWithLoyalty extends Request
     @Override
     public void perform(JSONObject parameters) {
         try {
-            String dueDate = presenter.rentwithloyaltypoints(parameters.getInt("customerID"), parameters.getInt("productID"));
+            String dueDate = presenter.rentWithLoyaltyPoints(parameters.getInt("customerID"), parameters.getInt("productID"));
             JSONObject obj = new JSONObject();
             obj.put("success", "true");
             obj.put("returnDate", dueDate);

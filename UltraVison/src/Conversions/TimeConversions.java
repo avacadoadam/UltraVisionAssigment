@@ -44,13 +44,11 @@ public final class TimeConversions {
 
 
 
-        public static Date ConvertDOB(String date) throws Exception {
+        public static Date ConvertDOB(String date) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         dateFormat.setLenient(false);
-        try {
+
             return dateFormat.parse(date.trim());
-        } catch (ParseException pe) {
-            throw new Exception("must have dd-MM-yyyy format");
-        }
+
     }
 }

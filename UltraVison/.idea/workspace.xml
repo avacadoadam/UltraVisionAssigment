@@ -1,59 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/API/API.java" line="191" />
+    <bookmark url="file://$PROJECT_DIR$/src/API/API.java" line="45" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1af3c186-0421-4a6b-9e08-7f7880dda976" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/CreateTitle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/CreateUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/RentWithAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/RequestFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/Requests/ReturnRental.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/API.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/API.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/APIInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/APIInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/Presenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/Presenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/API/SocketAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/API/SocketAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Clinet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Conversions/TimeConversions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Conversions/TimeConversions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/AccessPlans/AccessPlan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CardPaymentCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CardPaymentCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/CreditCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/DebitCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/DebitCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Visa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Card/Visa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/ChangeAccessPlanCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/ChangeAccessPlanCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/MembershipCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Customer/MembershipCard/MembershipCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Database/BaseDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Database/BaseDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Database/DatabaseCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Database/DatabaseCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Database/SQLite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Database/SQLite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/META-INF/UltraVison.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Rental/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Rental/Rental.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Titles/ProductType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Titles/ProductType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/Titles/Title.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/Titles/Title.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/AccessLevelCantRent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/AccessLevelCantRent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/CardSecurityError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/CardSecurityError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/CustomerAccountInformationError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/CustomerAccountInformationError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/InsuffientLoyaltyPoints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/InsuffientLoyaltyPoints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UltraVison/errors/InvalidCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UltraVison/errors/InvalidCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/UltraVison/API/APITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/UltraVison/API/PresenterTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/APIInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Conversions/TimeConversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conversions/TimeConversions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/BaseDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/BaseDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/SQLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/SQLite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,116 +25,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/API/Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/API.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3213">
-              <caret line="193" selection-start-line="193" selection-end-line="193" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/Request.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#512#513#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/RequestFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/ReturnRental.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="1305">
+              <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -236,22 +91,17 @@
         <option value="$PROJECT_DIR$/src/Customer/Card/CreditCard.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/Visa.java" />
         <option value="$PROJECT_DIR$/src/Rental/Rental.java" />
-        <option value="$PROJECT_DIR$/src/Conversions/TimeConversions.java" />
         <option value="$PROJECT_DIR$/src/Customer/Customer.java" />
         <option value="$PROJECT_DIR$/src/errors/AccessLevelCantRent.java" />
-        <option value="$PROJECT_DIR$/src/Database/DatabaseCommands.java" />
         <option value="$PROJECT_DIR$/src/Titles/ProductType.java" />
         <option value="$PROJECT_DIR$/src/Titles/Title.java" />
         <option value="$PROJECT_DIR$/src/Customer/MembershipCard/MembershipCard.java" />
-        <option value="$PROJECT_DIR$/src/Database/BaseDatabase.java" />
-        <option value="$PROJECT_DIR$/src/Database/SQLite.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/testBuilder.java" />
         <option value="$PROJECT_DIR$/src/Customer/Card/testBuilderBuilder.java" />
         <option value="$PROJECT_DIR$/src/Start.java" />
         <option value="$PROJECT_DIR$/src/API/Requests.java" />
         <option value="$PROJECT_DIR$/src/API/Request.java" />
         <option value="$PROJECT_DIR$/src/API/APIInterface.java" />
-        <option value="$PROJECT_DIR$/src/API/Presenter.java" />
         <option value="$PROJECT_DIR$/src/API/Requests/RequestFactory.java" />
         <option value="$PROJECT_DIR$/src/API/Requests/Request.java" />
         <option value="$PROJECT_DIR$/src/API/Requests/CreateUser.java" />
@@ -259,14 +109,19 @@
         <option value="$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java" />
         <option value="$PROJECT_DIR$/src/API/Requests/RentWithAccess.java" />
         <option value="$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java" />
-        <option value="$PROJECT_DIR$/src/API/Requests/ReturnRental.java" />
         <option value="$PROJECT_DIR$/src/API/API.java" />
+        <option value="$PROJECT_DIR$/src/Database/BaseDatabase.java" />
+        <option value="$PROJECT_DIR$/src/Conversions/TimeConversions.java" />
+        <option value="$PROJECT_DIR$/src/Database/DatabaseCommands.java" />
+        <option value="$PROJECT_DIR$/src/API/Requests/ReturnRental.java" />
+        <option value="$PROJECT_DIR$/src/Database/SQLite.java" />
+        <option value="$PROJECT_DIR$/src/API/Presenter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="width" value="1367" />
+    <option name="height" value="769" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -305,45 +160,13 @@
               <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Conversions" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Customer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Customer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="AccessPlans" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Customer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Card" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Database" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Titles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="UltraVison" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="UltraVison" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Start.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -420,7 +243,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556041760594" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556570820542" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -452,95 +275,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager" selected="Application.Start">
-    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Start" />
-      <module name="UltraVison" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="APITest.testCreateCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UltraVison" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.Requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.APITest" />
-      <option name="METHOD_NAME" value="testCreateCustomer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="APITest.testIncorrectCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UltraVison" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.Requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.APITest" />
-      <option name="METHOD_NAME" value="testIncorrectCommand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="APITest.testIncorrectDataType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UltraVison" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.Requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.APITest" />
-      <option name="METHOD_NAME" value="testIncorrectDataType" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="APITest.whenUseMockAnnotation_thenMockIsInjected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UltraVison" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.Requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.APITest" />
-      <option name="METHOD_NAME" value="whenUseMockAnnotation_thenMockIsInjected" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Start" />
-      <item itemvalue="JUnit.APITest.testCreateCustomer" />
-      <item itemvalue="JUnit.APITest.testIncorrectCommand" />
-      <item itemvalue="JUnit.APITest.testIncorrectDataType" />
-      <item itemvalue="JUnit.APITest.whenUseMockAnnotation_thenMockIsInjected" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Start" />
-        <item itemvalue="JUnit.APITest.testCreateCustomer" />
-        <item itemvalue="JUnit.APITest.testIncorrectDataType" />
-        <item itemvalue="JUnit.APITest.testIncorrectCommand" />
-        <item itemvalue="JUnit.APITest.whenUseMockAnnotation_thenMockIsInjected" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -596,17 +330,17 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-7" y="-7" width="2208" height="1248" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15582451" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15633546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.36714977" />
+      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.36703482" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3273906" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.34986946" />
@@ -629,6 +363,37 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Codota" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.151487" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32961932" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3277623" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.34986946" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39925718" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.32961932" />
+      <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32992566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Codota" order="9" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -649,15 +414,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/API/API.java</url>
-          <line>39</line>
+          <line>20</line>
           <properties />
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/API/API.java</url>
-          <line>30</line>
-          <properties class="API.API" />
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -752,16 +511,6 @@
     <entry file="file://$PROJECT_DIR$/src/errors/AccessLevelCantRent.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Throwable.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/sql/Statement.java" />
-    <entry file="file://$PROJECT_DIR$/src/Database/BaseDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1046">
-          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Customer/MembershipCard/MembershipCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -775,16 +524,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/src/Customer/Card/testBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/Customer/Card/testBuilderBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/Customer/AccessPlans/AccessPlan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Customer/Card/CardPaymentCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -858,30 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Conversions/TimeConversions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/SQLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-716">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/API/PresenterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -899,23 +614,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/APIInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/API/Requests/RequestFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="442">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -923,23 +624,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="340">
           <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -949,21 +648,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/Requests/RentWithLoyalty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="289">
           <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -971,33 +658,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/CreateTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/ChangeUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/API/API.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3213">
-          <caret line="193" selection-start-line="193" selection-end-line="193" />
+        <state relative-caret-position="731">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/Requests/ReturnRental.java">
+    <entry file="file://$PROJECT_DIR$/src/API/APIInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Customer/AccessPlans/AccessPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Conversions/TimeConversions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/BaseDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1587">
+          <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/API/Requests/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="200">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#467#468#0" expanded="true" />
             <element signature="e#512#513#0" expanded="true" />
             <element signature="e#560#561#0" expanded="true" />
             <element signature="e#607#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Requests/ReturnRental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/SQLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="53" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
