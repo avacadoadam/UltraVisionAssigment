@@ -19,7 +19,6 @@ public class PresenterTest {
     JSONObject commandIsINT;
 
     BaseDatabase db = null;
-    Presenter presenter;
     API api;
 
 
@@ -27,14 +26,14 @@ public class PresenterTest {
     public void startUp(){
         System.out.println("worked");
         try {
-            db = new SQLite();
+            db= new SQLite();
+            api = new API(db);
         } catch (Exception e) {
             System.exit(2);
             e.printStackTrace();
         }
-        presenter = new Presenter(db);
 
-        api = new API(presenter);
+
     }
 
 

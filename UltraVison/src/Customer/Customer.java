@@ -18,15 +18,26 @@ public class Customer {
     private int numOfActiveRentals;
     private boolean rentedWithLoyality = false;
 
-    public Customer(String lname, String DOB, String address,int customerID, String fname, int numOfActiveRentals, AccessPlan plan, Card card,int loyalityPoints) {
+    public Customer(String lname, String DOB, String address,int customerID, String fname, int numOfActiveRentals, AccessPlan plan, Card card,int localityPoints) {
         this.customerID = customerID;
         this.fname = fname;
         this.numOfActiveRentals = numOfActiveRentals;
-        this.membershipCard = new MembershipCard(loyalityPoints,card,plan);
+        this.membershipCard = new MembershipCard(localityPoints,card,plan);
         this.lname = lname;
         this.DOB = DOB;
         this.address = address;
     }
+
+    public Customer(MembershipCard membershipCard, String fname, String lname, String DOB, String address ) {
+        this.membershipCard = membershipCard;
+        this.fname = fname;
+        this.lname = lname;
+        this.DOB = DOB;
+        this.address = address;
+        this.numOfActiveRentals = 0;
+        this.rentedWithLoyality = false;
+    }
+
     /**
      * First Ensures customer is under Max Rental then checks if there is the memberShipCard has enough loyalty points
      * @return true if can be rented
@@ -62,13 +73,10 @@ public class Customer {
         return customerID;
     }
 
-    public static boolean validateFname(String fname) {
+    public static boolean validateName(String fname) {
         return !fname.contains("[0-9]+");
     }
 
-    public static boolean validateLame(String lname) {
-        return !lname.contains("[0-9]+");
-    }
 
     public MembershipCard getMembershipCard() {
         return membershipCard;

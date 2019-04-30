@@ -19,6 +19,14 @@ public class Title {
         this.rented = rented;
     }
 
+    public Title(String titleName, Date yearOfRelease, ProductType productType ) {
+        this.titleName = titleName;
+        this.yearOfRelease = yearOfRelease;
+        this.productType = productType;
+        this.rented = false;
+        titleID = 0;
+    }
+
     public int getTitleID() {
         return titleID;
     }

@@ -10,6 +10,7 @@ import Titles.Title;
 import errors.InvalidCard;
 
 import java.sql.*;
+import java.text.ParseException;
 import java.util.Date;
 
 public class SQLite implements BaseDatabase {
@@ -23,45 +24,15 @@ public class SQLite implements BaseDatabase {
     }
 
 
-    @Override
-    public boolean returnRental(int productID) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.executeUpdate(this.commands.updateTitleRented(productID, false));
-        statement.executeUpdate(this.commands.updateRentalToReturned(productID));
-        return true;
-    }
 
-    @Override
-    public void rent(int productID, int customerID, String dateRented, String due) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.executeUpdate(this.commands.createRental(customerID, productID));
-        statement.executeUpdate(this.commands.updateTitleRented(productID, true));
-    }
-
-    @Override
-    public void rentWithLoyaltyPoints(int productID, int customerID, String dateRented, String due) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.execute(this.commands.updateLoyaltyPoints(customerID, -100));
-        rent(productID, customerID, dateRented, due);
-    }
-
-    @Override
-    public int registerCustomer(String fname, String lname, String DOB, String address, Card card, AccessPlan accessPlan) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        return statement.executeUpdate(this.commands.createCustomer(fname, lname, DOB, address, accessPlan, card));
-    }
 
     @Override
     public Customer getCustomerData(int customerID) throws SQLException, InvalidCard {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        ResultSet rs = statement.executeQuery(commands.getNumberOfActiveRentals(customerID));
+        ResultSet rs = statement.executeQuery(DatabaseCommands.getNumberOfActiveRentals(customerID));
         int NumOfRentals = rs.getInt("NumOfRentals");
-        ResultSet rs1 = statement.executeQuery(commands.getCustomerInformation(customerID));
+        ResultSet rs1 = statement.executeQuery(DatabaseCommands.getCustomerInformation(customerID));
 
         Customer customer = new Customer(rs.getString("lName"),
                 rs.getString("DOB"),
@@ -77,10 +48,10 @@ public class SQLite implements BaseDatabase {
     }
 
     @Override
-    public Title getTitleInformation(int productID) throws Exception {
+    public Title getTitleData(int productID) throws SQLException, ParseException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        ResultSet rs = statement.executeQuery(commands.getProductInformation(productID));
+        ResultSet rs = statement.executeQuery(DatabaseCommands.getProductInformation(productID));
         boolean rented = (rs.getInt("rented") == 1);
         return new Title(rs.getInt("ID"),
                 rs.getString("titleName"),
@@ -90,7 +61,7 @@ public class SQLite implements BaseDatabase {
     }
 
     @Override
-    public Rental getRentalInformation(int rentalID) throws Exception {
+    public Rental getRentalData(int rentalID) throws SQLException, ParseException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
         ResultSet rs = statement.executeQuery("SELECT * FROM rentals WHERE ID = " + rentalID + ";");
@@ -101,52 +72,12 @@ public class SQLite implements BaseDatabase {
                 , rs.getInt("title_ID"), rs.getInt("customer_ID"));
     }
 
-    @Override
-    public void updateCustomerLoyaltyPoints(int customerID, int amount) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.executeUpdate(commands.updateLoyaltyPoints(customerID, amount));
-    }
-
-    @Override
-    public int createNewTitle(Title title) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        return statement.executeUpdate(commands.createTitle(title.getTitleName(),title.getProductType(),title.getYearOfRelease().toString()));
-    }
-
-    @Override
-    public boolean updateCustomerAccessPlan(int customerID, AccessPlan accessPlan) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.executeUpdate(commands.changeCustomerAccessPlan(customerID,accessPlan.getAccessPlanName()));
-        return true;
-    }
-
-
-    @Override
-    public boolean updateCustomerAddress(int customerID, String address) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.executeUpdate(commands.changeCustomerAddress(customerID,address));
-        return true;
-    }
-
-
-    @Override
-    public boolean updateCustomerCard(int customerID, Card card) throws SQLException {
-        Statement statement = this.connection.createStatement();
-        statement.setQueryTimeout(30);
-        statement.executeUpdate(commands.changeCustomerCardType(customerID,card.getCardType()));
-        statement.executeUpdate(commands.changeCustomerCardNumber(customerID,String.valueOf(card.getCardNumber())));
-        return true;
-    }
 
     @Override
     public Title[] ListAvailableTitles() throws SQLException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        ResultSet rs = statement.executeQuery(this.commands.getAllAvaibleTitles());
+        ResultSet rs = statement.executeQuery(DatabaseCommands.getAllAvaibleTitles());
         return parseTitlesFromDatabse(rs);
     }
 
@@ -155,7 +86,7 @@ public class SQLite implements BaseDatabase {
     public Title[] ListAvailableTitles(ProductType type) throws SQLException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        ResultSet rs = statement.executeQuery(this.commands.getAllAvaibleTitles(type.getType()));
+        ResultSet rs = statement.executeQuery(DatabaseCommands.getAllAvaibleTitles(type.getType()));
         return parseTitlesFromDatabse(rs);
     }
 
@@ -220,4 +151,18 @@ public class SQLite implements BaseDatabase {
     }
 
 
+    @Override
+    public ResultSet excuteQuery(String SQL) throws SQLException {
+        Statement statement = this.connection.createStatement();
+        statement.setQueryTimeout(30);
+        ResultSet rs = statement.executeQuery(SQL);
+        return rs;
+    }
+
+    @Override
+    public void executeCommand(String SQL) throws SQLException {
+        Statement statement = this.connection.createStatement();
+        statement.setQueryTimeout(30);
+        statement.executeUpdate(SQL);
+    }
 }

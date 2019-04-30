@@ -1,32 +1,71 @@
 package API.Requests;
 
 import API.APIInterface;
-import API.Presenter;
 import Conversions.TimeConversions;
+import Customer.Customer;
+import Database.BaseDatabase;
+import Database.DatabaseCommands;
+import Rental.Rental;
+import errors.CardSecurityError;
 import errors.InvalidCard;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.text.ParseException;
+
 public class ReturnRental extends Request {
-    public ReturnRental(APIInterface apiInterface, Presenter presenter) {
-        super(apiInterface, presenter);
+
+    private int productID;
+
+    public ReturnRental(APIInterface apiInterface, BaseDatabase databaseInterface) {
+        super(apiInterface, databaseInterface);
+    }
+
+
+    @Override
+    protected void decodeParameters(JSONObject parameters) {
+        try {
+            productID = parameters.getInt("productID");
+            isValidInput = true;
+        }catch (JSONException e){
+            sendError("productID was not correct should be int");
+        }
     }
 
     @Override
-    public void perform(JSONObject parameters) {
-        try {
-            if(presenter.returnProduct(parameters.getInt("productID"))){
-                JSONObject obj = new JSONObject();
-                obj.put("success", "true");
-                obj.put("returnDate", TimeConversions.returnTodayDate());
-                output(obj);
-            }else{
-                sendError("return false");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } catch (InvalidCard invalidCard) {
-            sendError("Could not process Customer Card");
-            invalidCard.printStackTrace();
-        }
+    protected boolean validate() {
+        return isValidInput;
     }
+
+    @Override
+    protected void perform() {
+        try {
+            Rental rental = databaseInterface.getRentalData(productID);
+            long dateLate;
+            if ((dateLate = TimeConversions.numberOfDaysLate(rental.getDateReturned())) > 0) {
+                double lateFee = 0.50f * dateLate;
+                BigDecimal Fee = new BigDecimal(lateFee);
+                Customer customer = databaseInterface.getCustomerData(rental.getCustomerID());
+                try {
+                    customer.getMembershipCard().getCard().requestPayment(Fee);
+                } catch (CardSecurityError cardSecurityError) {
+                    sendError("Could not charge late penalty");
+                    return;
+                }
+                databaseInterface.executeCommand(DatabaseCommands.updateLoyaltyPoints(rental.getCustomerID(), -20));
+            } else {
+                databaseInterface.executeCommand(DatabaseCommands.updateLoyaltyPoints(rental.getCustomerID(), 20));
+            }
+            databaseInterface.executeCommand(DatabaseCommands.updateTitleRented(productID,false));
+            databaseInterface.executeCommand(DatabaseCommands.updateRentalToReturned(productID));
+        } catch (SQLException | ParseException e){
+            sendError("Error get rental from database");
+        } catch (InvalidCard invalidCard) {
+            sendError("Invalid customer card");
+        }
+
+    }
+
 }

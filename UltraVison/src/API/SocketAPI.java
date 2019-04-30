@@ -18,13 +18,11 @@ import java.util.concurrent.Executors;
 public class SocketAPI implements Runnable {
 
     private ServerSocket socket;
-    private Presenter system;
     private static boolean SERVER_ON = true;
     private static final int PORT = 3234;
     private ExecutorService pool = Executors.newFixedThreadPool(20);
 
-    public SocketAPI(Presenter system) {
-        this.system = system;
+    public SocketAPI() {
         try {
             this.socket = new ServerSocket(PORT);
         } catch (IOException e) {
