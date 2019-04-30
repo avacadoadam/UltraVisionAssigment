@@ -2,6 +2,7 @@ package API;
 
 import API.Requests.Request;
 import API.Requests.RequestFactory;
+import Database.BaseDatabase;
 import org.json.JSONObject;
 
 
@@ -12,12 +13,11 @@ import org.json.JSONObject;
 
 public class API implements APIInterface {
 
-    private Presenter presenter;
+    private BaseDatabase DB;
 
-    public API(Presenter presenter) {
-        this.presenter = presenter;
+    public API(BaseDatabase DB) {
+        this.DB = DB;
     }
-
 
     public void request(JSONObject incomingRequest){
         String command;
@@ -28,9 +28,9 @@ public class API implements APIInterface {
             sendError("command isn't a string");
             return;
         }
-        Request request = RequestFactory.Factory(this,presenter,command);
+        Request request = RequestFactory.Factory(this,DB,command);
         if(request != null){
-            request.perform(incomingRequest);
+            request.performRequest(incomingRequest);
         }else{
             sendError("Unknown Command");
         }

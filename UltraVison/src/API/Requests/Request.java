@@ -2,26 +2,61 @@ package API.Requests;
 
 
 import API.APIInterface;
-import API.Presenter;
+import Database.BaseDatabase;
 import org.json.JSONObject;
 
 public abstract class Request {
 
     private APIInterface apiInterface;
-    protected Presenter presenter;
+    protected BaseDatabase databaseInterface;
+    protected boolean isValidInput;
 
-    public Request(APIInterface apiInterface, Presenter presenter) {
+    public Request(APIInterface apiInterface, BaseDatabase databaseInterface) {
         this.apiInterface = apiInterface;
-        this.presenter = presenter;
+        this.databaseInterface = databaseInterface;
     }
 
-    public abstract void perform(JSONObject parameters);
+    /**
+     * Responsible for extracting the code,validation the storing.
+     *
+     * @param parameters
+     */
+    protected abstract void decodeParameters(JSONObject parameters);
 
-    protected void output(JSONObject response) {
+    /**
+     * Responsible for validating the data and ensuring there was no error in decodeParemter
+     */
+    protected abstract boolean validate();
+
+    /**
+     * Responsible for performing the actions on the database.
+     */
+    protected abstract void perform();
+
+    /**
+     * Enforces a template design pattern for all request so that they first
+     * decode incoming API parameters encode in json then store then locally so perform can use them
+     *
+     * @param parameters the parameters send by the API for a request
+     */
+    public final void performRequest(JSONObject parameters) {
+        decodeParameters(parameters);
+        if (validate()) {
+            perform();
+        }
+    }
+
+    protected final void output(JSONObject response) {
         apiInterface.output(response);
     }
 
-    protected void sendError(String failure) {
+    protected final void sendSuccess(String success) {
+        isValidInput = true;
+        apiInterface.output(new JSONObject().put("success", success));
+    }
+
+    protected final void sendError(String failure) {
+        isValidInput = false;
         apiInterface.sendError(failure);
     }
 

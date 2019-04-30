@@ -1,5 +1,4 @@
 import API.API;
-import API.Presenter;
 import Database.BaseDatabase;
 import Database.SQLite;
 import org.json.JSONObject;
@@ -13,8 +12,7 @@ public class Start {
 
         try {
             BaseDatabase database = new SQLite();
-            Presenter presenter = new Presenter(database);
-            API api = new API(presenter);
+            API api = new API(database);
             new Client(api);
         } catch (Exception e) {
             e.printStackTrace();
