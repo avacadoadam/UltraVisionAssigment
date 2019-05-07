@@ -13,3 +13,9 @@ Ensuring that the system is scalable, interchangeable and also Secure.
 
 ![alt OverView](https://github.com/avacadoadam/UltraVisionAssigment/blob/master/Plan/Over%20view%20of%20System.png)
 
+ ## Class UML
+ ![alt OverView](https://github.com/avacadoadam/UltraVisionAssigment/blob/master/Plan/Ultra%20Vision%20Object%20Diagram.png)
+ 
+ ## Acitvity Diagram
+ ![alt OverView](https://github.com/avacadoadam/UltraVisionAssigment/blob/master/Plan/Activity%20Diagram%20for%20Ultra%20Vision.png)
+
