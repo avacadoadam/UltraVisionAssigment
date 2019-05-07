@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Conversions.TimeConversions;
 import Customer.Customer;
 import Database.BaseDatabase;
@@ -17,8 +17,8 @@ public class RentWithAccess extends Request {
 
     private int customerID, productID;
 
-    public RentWithAccess(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public RentWithAccess(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 

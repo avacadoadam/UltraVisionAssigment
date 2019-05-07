@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Customer;
 import Database.BaseDatabase;
@@ -14,10 +14,10 @@ import java.sql.SQLException;
 
 public class ChangeCustomerAccessPlan extends Request {
     private int customerID;
-    AccessPlan plan;
+    private AccessPlan plan;
 
-    public ChangeCustomerAccessPlan(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public ChangeCustomerAccessPlan(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 
@@ -56,6 +56,7 @@ public class ChangeCustomerAccessPlan extends Request {
         } catch (CardSecurityError cardSecurityError) {
             sendError("Could not process the card payment");
         } catch (SQLException e) {
+            e.printStackTrace();
             sendError("Could not change accessplan in database");
         }
 

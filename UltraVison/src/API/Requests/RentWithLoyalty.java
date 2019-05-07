@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Conversions.TimeConversions;
 import Customer.Customer;
 import Database.BaseDatabase;
@@ -24,8 +24,8 @@ import java.text.ParseException;
 public class RentWithLoyalty extends Request {
     private int customerID, productID;
 
-    public RentWithLoyalty(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public RentWithLoyalty(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 

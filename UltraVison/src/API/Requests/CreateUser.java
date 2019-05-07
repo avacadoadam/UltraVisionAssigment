@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Conversions.TimeConversions;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
@@ -47,8 +47,8 @@ public class CreateUser extends Request {
     private AccessPlan accessPlan;
     private Card card;
 
-    public CreateUser(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public CreateUser(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 
@@ -87,13 +87,13 @@ public class CreateUser extends Request {
         try {
             String cardNumberString = parameters.getString("cardNumber");
             cardNumber = Long.parseLong(cardNumberString);
-        } catch (JSONException e) {
+        } catch (JSONException | NumberFormatException e) {
             sendError("could not get cardNumber");
             return;
         }
         try {
             String plan = parameters.getString("accessPlan");
-            accessPlan = AccessPlan.valueOf(plan);
+            accessPlan = AccessPlan.accessPlanFactory(plan);
         } catch (JSONException e) {
             sendError("could not get accessPlan");
             return;
@@ -106,12 +106,11 @@ public class CreateUser extends Request {
         if (!Customer.validateName(fname) && !Customer.validateName(lname)) {
             return false;
         }
-
-
         try {
             TimeConversions.ConvertDOB(DOB);
         } catch (ParseException e) {
-            sendError("date of birth invalid format must be dd-MM-yyyy");
+            e.printStackTrace();
+            sendError("date of birth invalid format must be yyyy-MM-dd");
             return false;
         }
         //checks card information
@@ -142,7 +141,10 @@ public class CreateUser extends Request {
     protected void perform() {
         try {
             databaseInterface.executeCommand(DatabaseCommands.createCustomer(fname, lname, DOB, address, accessPlan, card));
+            int id = databaseInterface.getLastInsertRow();
+            output(new JSONObject().put("success",true).put("customerID",id));
         } catch (SQLException e) {
+            e.printStackTrace();
             sendError("Could not process request to database");
         }
     }

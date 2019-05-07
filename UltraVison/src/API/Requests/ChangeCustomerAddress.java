@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Database.BaseDatabase;
 import Database.DatabaseCommands;
 import org.json.JSONException;
@@ -13,8 +13,8 @@ public class ChangeCustomerAddress extends Request {
     private int customerID;
     private String address;
 
-    public ChangeCustomerAddress(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public ChangeCustomerAddress(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 

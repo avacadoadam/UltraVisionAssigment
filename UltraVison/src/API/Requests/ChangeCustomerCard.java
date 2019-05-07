@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Customer.Card.Card;
 import Database.BaseDatabase;
 import Database.DatabaseCommands;
@@ -15,8 +15,8 @@ public class ChangeCustomerCard extends Request {
     private String cardType;
     private long cardNumber;
 
-    public ChangeCustomerCard(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public ChangeCustomerCard(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 

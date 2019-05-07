@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Conversions.TimeConversions;
 import Customer.Customer;
 import Database.BaseDatabase;
@@ -19,8 +19,8 @@ public class ReturnRental extends Request {
 
     private int productID;
 
-    public ReturnRental(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public ReturnRental(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 

@@ -1,0 +1,44 @@
+CREATE TABLE customer
+(
+  ID         INTEGER PRIMARY KEY AUTOINCREMENT,
+  fName      TEXT,
+  lName      TEXT,
+  DOB        text,
+  address    TEXT,
+  accessPlan TEXT,
+  cardType   TEXT,
+  cardNumber TEXT
+);
+
+CREATE TABLE title
+(
+  ID            INTEGER PRIMARY KEY AUTOINCREMENT,
+  titleName     TEXT,
+  typeOfMovie   TEXT,
+  yearOfRelease TEXT
+);
+
+CREATE TABLE rentals
+(
+  ID           INTEGER PRIMARY KEY,
+  customer_ID  INTEGER,
+  title_ID     INTEGER,
+  dateRented   TEXT,
+  dateReturned TEXT,
+  returned     INTEGER,
+  FOREIGN KEY (customer_ID) REFERENCES customer (ID),
+  FOREIGN KEY (title_ID) REFERENCES title (ID)
+);
+
+INSERT INTO customer VALUES (1,"adam","sever","02/09/1998","115 ceedWalk Dublin 15","Music","Debit","198364781");
+INSERT INTO customer VALUES ("mattew","lname","02/09/1992","113 ceedWalk Dublin 15","TV","Credit","198364381");
+INSERT INTO customer VALUES ("firstname","secondname","02/10/1992","117 ceedWalk Dublin 15","Premiume","Credit","198364381");
+
+INSERT INTO title VALUES (1,"hangover","tv","2016");
+INSERT INTO title VALUES ("wolf of wall street","tv","2017");
+INSERT INTO title VALUES ("social network","tv","2017");
+
+INSERT INTO rentals VALUES (1,1,1,"02/10/2019",NULL,0);
+INSERT INTO rentals VALUES (1,2,"02/10/2019",NULL,0);
+INSERT INTO rentals VALUES (1,3,"02/10/2019",NULL,0);
+

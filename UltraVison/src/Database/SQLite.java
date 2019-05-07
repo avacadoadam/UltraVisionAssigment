@@ -9,6 +9,9 @@ import Titles.ProductType;
 import Titles.Title;
 import errors.InvalidCard;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.sql.*;
 import java.text.ParseException;
 import java.util.Date;
@@ -16,14 +19,12 @@ import java.util.Date;
 public class SQLite implements BaseDatabase {
 
     private Connection connection = null;
-    private DatabaseCommands commands;
 
     public SQLite() throws Exception {
-        if (!this.connectToDatabase()) throw new Exception("Can not connect to database");
-        this.commands = new DatabaseCommands();
+
+        if (!this.connectToDatabase())
+            throw new Exception("Can not connect to database");
     }
-
-
 
 
     @Override
@@ -34,16 +35,15 @@ public class SQLite implements BaseDatabase {
         int NumOfRentals = rs.getInt("NumOfRentals");
         ResultSet rs1 = statement.executeQuery(DatabaseCommands.getCustomerInformation(customerID));
 
-        Customer customer = new Customer(rs.getString("lName"),
-                rs.getString("DOB"),
-                rs.getString("address"),
-                rs.getInt("ID"),
-                rs.getString("fName"),
+        Customer customer = new Customer(rs1.getString("lName"),
+                rs1.getString("DOB"),
+                rs1.getString("address"),
+                rs1.getInt("ID"),
+                rs1.getString("fName"),
                 NumOfRentals,
-                AccessPlan.valueOf(rs.getString("accessPlan")),
-                Card.CardFactory(rs.getString("cardType"), new Long(rs.getString("cardNumber"))),
-                rs.getInt("loyaltyPoints"));
-
+                AccessPlan.valueOf(rs1.getString("accessPlan")),
+                Card.CardFactory(rs1.getString("cardType"), new Long(rs1.getString("cardNumber"))),
+                rs1.getInt("loyaltyPoints"));
         return customer;
     }
 
@@ -122,20 +122,42 @@ public class SQLite implements BaseDatabase {
     private boolean connectToDatabase() {
         try {
             // create a database connection
-            this.connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\avaca\\Desktop\\Ultra Vision Assigment\\UltraVison\\src\\ultraVision.db");
+            this.connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\avaca\\Desktop\\Projects\\Ultra Vision Assigment\\UltraVison\\ultraVision.db");
+
+                    connection.prepareStatement("CREATE TABLE IF NOT EXISTS customer\n" +
+                            "(\n" +
+                            "  ID         INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                            "  fName      TEXT,\n" +
+                            "  lName      TEXT,\n" +
+                            "  DOB        text,\n" +
+                            "  address    TEXT,\n" +
+                            "  accessPlan TEXT,\n" +
+                            "  cardType   TEXT,\n" +
+                            "  cardNumber TEXT\n" +
+                            ");").executeUpdate();
+                    connection.prepareStatement("CREATE TABLE IF NOT EXISTS title\n" +
+                            "(\n" +
+                            "  ID            INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                            "  titleName     TEXT,\n" +
+                            "  typeOfMovie   TEXT,\n" +
+                            "  yearOfRelease TEXT\n" +
+                            ");").executeUpdate();
+                    connection.prepareStatement("CREATE TABLE IF NOT EXISTS rentals\n" +
+                            "(\n" +
+                            "  ID           INTEGER PRIMARY KEY,\n" +
+                            "  customer_ID  INTEGER,\n" +
+                            "  title_ID     INTEGER,\n" +
+                            "  dateRented   TEXT,\n" +
+                            "  dateReturned TEXT,\n" +
+                            "  returned     INTEGER,\n" +
+                            "  FOREIGN KEY (customer_ID) REFERENCES customer (ID),\n" +
+                            "  FOREIGN KEY (title_ID) REFERENCES title (ID)\n" +
+                            ");");
             return true;
         } catch (SQLException e) {
             // if the error message is "out of memory",
             // it probably means no database file is found
             System.err.println(e.getMessage());
-        } finally {
-            try {
-                if (connection != null)
-                    connection.close();
-            } catch (SQLException e) {
-                // connection close failed.
-                System.err.println(e.getMessage());
-            }
         }
         return false;
     }
@@ -155,14 +177,18 @@ public class SQLite implements BaseDatabase {
     public ResultSet excuteQuery(String SQL) throws SQLException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        ResultSet rs = statement.executeQuery(SQL);
-        return rs;
+        return statement.executeQuery(SQL);
     }
 
     @Override
-    public void executeCommand(String SQL) throws SQLException {
+    public int executeCommand(String SQL) throws SQLException {
         Statement statement = this.connection.createStatement();
         statement.setQueryTimeout(30);
-        statement.executeUpdate(SQL);
+        return statement.executeUpdate(SQL);
+    }
+
+    @Override
+    public int getLastInsertRow() throws SQLException {
+        return connection.createStatement().executeQuery("SELECT last_insert_rowid() as LastID;").getInt(1);
     }
 }

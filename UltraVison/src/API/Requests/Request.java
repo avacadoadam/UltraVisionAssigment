@@ -1,18 +1,18 @@
 package API.Requests;
 
 
-import API.APIInterface;
+import API.ServerCallback;
 import Database.BaseDatabase;
 import org.json.JSONObject;
 
 public abstract class Request {
 
-    private APIInterface apiInterface;
+    private ServerCallback serverCallback;
     protected BaseDatabase databaseInterface;
     protected boolean isValidInput;
 
-    public Request(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        this.apiInterface = apiInterface;
+    public Request(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        this.serverCallback = serverCallback;
         this.databaseInterface = databaseInterface;
     }
 
@@ -47,17 +47,17 @@ public abstract class Request {
     }
 
     protected final void output(JSONObject response) {
-        apiInterface.output(response);
+        serverCallback.output(response);
     }
 
     protected final void sendSuccess(String success) {
         isValidInput = true;
-        apiInterface.output(new JSONObject().put("success", success));
+        serverCallback.output(new JSONObject().put("success", true));
     }
 
     protected final void sendError(String failure) {
         isValidInput = false;
-        apiInterface.sendError(failure);
+        serverCallback.sendError(failure);
     }
 
 

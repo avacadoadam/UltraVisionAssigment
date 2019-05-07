@@ -1,6 +1,6 @@
 package API.Requests;
 
-import API.APIInterface;
+import API.ServerCallback;
 import Conversions.TimeConversions;
 import Database.BaseDatabase;
 import Database.DatabaseCommands;
@@ -17,8 +17,8 @@ public class CreateTitle extends Request {
 
     Title title;
 
-    public CreateTitle(APIInterface apiInterface, BaseDatabase databaseInterface) {
-        super(apiInterface, databaseInterface);
+    public CreateTitle(ServerCallback serverCallback, BaseDatabase databaseInterface) {
+        super(serverCallback, databaseInterface);
     }
 
 

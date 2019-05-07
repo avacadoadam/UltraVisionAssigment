@@ -65,4 +65,12 @@ public enum AccessPlan {
         return maxRentals;
     }
 
+    public static AccessPlan accessPlanFactory(String type){
+        if(type.equals(AccessPlan.ML.getAccessPlanName())) return AccessPlan.ML;
+        if(type.equals(AccessPlan.VL.getAccessPlanName())) return AccessPlan.VL;
+        if(type.equals(AccessPlan.PR.getAccessPlanName())) return AccessPlan.PR;
+        if(type.equals(AccessPlan.TV.getAccessPlanName())) return AccessPlan.TV;
+        throw new IllegalArgumentException();
+    }
+
 }

@@ -1,7 +1,5 @@
 package Database;
 
-import Customer.AccessPlans.AccessPlan;
-import Customer.Card.Card;
 import Customer.Customer;
 import Rental.Rental;
 import Titles.ProductType;
@@ -22,12 +20,18 @@ public interface BaseDatabase {
 
 
 
-    void executeCommand(String SQL) throws SQLException;
+    int executeCommand(String SQL) throws SQLException;
+
+    /**
+     * uses last_insert_rowid() to get <b>OUR</b> last insert rowid this is will not be effect by other connections.
+     * @return
+     * @throws SQLException
+     */
+    int getLastInsertRow() throws SQLException;
 
     ResultSet excuteQuery(String SQL) throws SQLException;
 
     Customer getCustomerData(int customerID)throws SQLException, InvalidCard;
-
 
     Rental getRentalData(int rentalID) throws SQLException, ParseException;
 
