@@ -10,9 +10,6 @@ public class Start {
         try {
             BaseDatabase database = new SQLite();
             API api = new API(database);
-
-            //test
-//            database.executeCommand("");
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(2);
