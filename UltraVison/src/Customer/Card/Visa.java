@@ -9,7 +9,7 @@ public class Visa extends Card {
 
 
      Visa(Long cardNumber) throws InvalidCard {
-        super(cardNumber, "Visa Card");
+        super(cardNumber, "visa");
     }
 
     @Override

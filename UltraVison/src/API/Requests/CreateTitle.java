@@ -11,7 +11,8 @@ import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.text.ParseException;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class CreateTitle extends Request {
 
@@ -27,25 +28,15 @@ public class CreateTitle extends Request {
         String title = "";
         String yearOfRelease = "";
         String typeOfMovie = "";
-        Date yearOfReleaseDate;
+        LocalDate yearOfReleaseDate;
         try {
             title = parameters.getString("titleName");
-        } catch (JSONException e) {
-            sendError("titleName was not found, not a String or was null");return;
-        }
-        try {
             yearOfRelease = parameters.getString("yearOfRelease");
-        } catch (JSONException e) {
-            sendError("titleName was not found, not a String or was null");return;
-        }
-        try {
             typeOfMovie = parameters.getString("typeOfMovie");
-        } catch (JSONException e) {
-            sendError("titleName was not found, not a String or was null");return;
-        }
-        try {
             yearOfReleaseDate = TimeConversions.ConvertDOB(yearOfRelease);
-        } catch (ParseException e) {
+        } catch (JSONException e) {
+            sendError("titleName,yearOfRelease and typeOfMovie must be set and be string");return;
+        } catch (ParseException | DateTimeParseException e) {
             sendError("yearOfRelease was not properly formatted use YYYY-MM-DD");return;
         }
         this.title = new Title(title,
@@ -57,6 +48,7 @@ public class CreateTitle extends Request {
 
     @Override
     protected boolean validate() {
+        if(!isValidInput)return false;
         if(title.getTitleName().isEmpty()){
             sendError("Title Name is empty");
             return false;

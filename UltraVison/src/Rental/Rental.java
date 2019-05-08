@@ -1,17 +1,17 @@
 package Rental;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Rental {
 
     private int rentalID;
-    private Date dateRented;
-    private Date dateReturned;
+    private LocalDate dateRented;
+    private LocalDate dateReturned;
     private boolean returned;
     private int titleID;
     private int customerID;
 
-    public Rental(int rentalID, Date dateRented, Date dateReturned, boolean returned, int titleID, int customerID) {
+    public Rental(int rentalID, LocalDate dateRented, LocalDate dateReturned, boolean returned, int titleID, int customerID) {
         this.rentalID = rentalID;
         this.dateRented = dateRented;
         this.dateReturned = dateReturned;
@@ -28,11 +28,11 @@ public class Rental {
         return rentalID;
     }
 
-    public Date getDateRented() {
+    public LocalDate getDateRented() {
         return dateRented;
     }
 
-    public Date getDateReturned() {
+    public LocalDate getDateReturned() {
         return dateReturned;
     }
 

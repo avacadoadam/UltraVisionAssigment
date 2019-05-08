@@ -1,5 +1,6 @@
 package Database;
 
+import Conversions.TimeConversions;
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
 import Titles.ProductType;
@@ -24,8 +25,8 @@ public class DatabaseCommands {
     }
 
     public static String createRental(int customerID, int titleID) {
-        String sql = "INSERT INTO rentals(customer_ID, title_ID, dateRented) VALUES (%d,%d,\"%s\",NULL,0);";
-        return String.format(sql, customerID, titleID, getDate());
+        String sql = "INSERT INTO rentals(customer_ID, title_ID, dateRented,dateReturned,returned) VALUES (%d,%d,\"%s\",NULL,0);";
+        return String.format(sql, customerID, titleID, TimeConversions.returnTodayDate());
     }
 
     public static String updateTitleRented(int titleID, boolean rented) {
@@ -37,7 +38,7 @@ public class DatabaseCommands {
 
     public static String updateRentalToReturned(int titleID) {
         String sql = "UPDATE rentals SET dateReturned = \"%s\",returned = 1 WHERE title_ID = %d;";
-        return String.format(sql, getDate(), titleID);
+        return String.format(sql, TimeConversions.returnTodayDate(), titleID);
     }
 
     public static String updateLoyaltyPoints(int customerID, int amount) {
@@ -94,10 +95,7 @@ public class DatabaseCommands {
         String sql = "SELECT * FROM title WHERE ID = %d;";
         return String.format(sql, productID);
     }
-    private static String getDate() {
-        Calendar cal = Calendar.getInstance();
-        return cal.getTime().toString();
-    }
+
 
 
 

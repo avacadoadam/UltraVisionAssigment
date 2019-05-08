@@ -1,17 +1,17 @@
 package Titles;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Title {
 
     private int titleID;
     private String titleName;
-    private Date yearOfRelease;
+    private LocalDate yearOfRelease;
     private ProductType productType;
     private boolean rented;
 
 
-    public Title(int titleID, String titleName, Date yearOfRelease, ProductType productType, boolean rented) {
+    public Title(int titleID, String titleName, LocalDate yearOfRelease, ProductType productType, boolean rented) {
         this.titleID = titleID;
         this.titleName = titleName;
         this.yearOfRelease = yearOfRelease;
@@ -19,7 +19,7 @@ public class Title {
         this.rented = rented;
     }
 
-    public Title(String titleName, Date yearOfRelease, ProductType productType ) {
+    public Title(String titleName, LocalDate yearOfRelease, ProductType productType) {
         this.titleName = titleName;
         this.yearOfRelease = yearOfRelease;
         this.productType = productType;
@@ -35,7 +35,7 @@ public class Title {
         return titleName;
     }
 
-    public Date getYearOfRelease() {
+    public LocalDate getYearOfRelease() {
         return yearOfRelease;
     }
 

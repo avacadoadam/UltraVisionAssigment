@@ -15,7 +15,7 @@ public class DebitCard extends Card {
 
 
     DebitCard(Long cardNumber) throws InvalidCard {
-        super(cardNumber,"Debit Card");
+        super(cardNumber,"debit");
     }
 
     @Override

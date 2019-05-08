@@ -2,7 +2,6 @@ package Customer.MembershipCard;
 
 import Customer.AccessPlans.AccessPlan;
 import Customer.Card.Card;
-import Customer.Card.CardPaymentCallback;
 import Titles.ProductType;
 import errors.CardSecurityError;
 
@@ -13,20 +12,20 @@ import java.math.BigDecimal;
  */
 public class MembershipCard {
 
-    private int localityPoints;
+    private int loyaltyPoints;
     private Card card;
     private AccessPlan accessPlan;
 
 
-    public MembershipCard(int localityPoints, Card card, AccessPlan accessPlan) {
-        this.localityPoints = localityPoints;
+    public MembershipCard(int loyaltyPoints, Card card, AccessPlan accessPlan) {
+        this.loyaltyPoints = loyaltyPoints;
         this.card = card;
         this.accessPlan = accessPlan;
     }
 
     public boolean canRentWithLoyaltyPoints(){
-        if (localityPoints > 100){
-            this.localityPoints =- 100;
+        if (loyaltyPoints > 100){
+            this.loyaltyPoints =- 100;
             return true;
         }
         return false;
@@ -61,7 +60,11 @@ public class MembershipCard {
     }
 
     private void addLoyalityPointsforRental(){
-        this.localityPoints =+ 10;
+        this.loyaltyPoints =+ 10;
+    }
+
+    public int getLoyaltyPoints() {
+        return loyaltyPoints;
     }
 
     public Card getCard() {

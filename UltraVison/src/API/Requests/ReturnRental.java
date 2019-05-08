@@ -44,7 +44,7 @@ public class ReturnRental extends Request {
         try {
             Rental rental = databaseInterface.getRentalData(productID);
             long dateLate;
-            if ((dateLate = TimeConversions.numberOfDaysLate(rental.getDateReturned())) > 0) {
+            if ((dateLate = TimeConversions.numberOfDaysLate(TimeConversions.returnTodayDate())) > 0) {
                 double lateFee = 0.50f * dateLate;
                 BigDecimal Fee = new BigDecimal(lateFee);
                 Customer customer = databaseInterface.getCustomerData(rental.getCustomerID());
@@ -60,8 +60,10 @@ public class ReturnRental extends Request {
             }
             databaseInterface.executeCommand(DatabaseCommands.updateTitleRented(productID,false));
             databaseInterface.executeCommand(DatabaseCommands.updateRentalToReturned(productID));
+            sendSuccess("Successfully returned title it was " + (dateLate>0 ? "late": "not late"));
         } catch (SQLException | ParseException e){
-            sendError("Error get rental from database");
+            e.printStackTrace();
+            sendError("Error getting rental from database");
         } catch (InvalidCard invalidCard) {
             sendError("Invalid customer card");
         }

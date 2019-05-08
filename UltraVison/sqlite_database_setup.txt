@@ -7,7 +7,8 @@ CREATE TABLE customer
   address    TEXT,
   accessPlan TEXT,
   cardType   TEXT,
-  cardNumber TEXT
+  cardNumber TEXT,
+  loyaltyPoints INTEGER DEFAULT 0
 );
 
 CREATE TABLE title
@@ -15,7 +16,8 @@ CREATE TABLE title
   ID            INTEGER PRIMARY KEY AUTOINCREMENT,
   titleName     TEXT,
   typeOfMovie   TEXT,
-  yearOfRelease TEXT
+  yearOfRelease TEXT,
+  rented        INTEGER DEFAULT 0
 );
 
 CREATE TABLE rentals
@@ -34,8 +36,8 @@ INSERT INTO customer VALUES (1,"adam","sever","02/09/1998","115 ceedWalk Dublin 
 INSERT INTO customer VALUES ("mattew","lname","02/09/1992","113 ceedWalk Dublin 15","TV","Credit","198364381");
 INSERT INTO customer VALUES ("firstname","secondname","02/10/1992","117 ceedWalk Dublin 15","Premiume","Credit","198364381");
 
-INSERT INTO title VALUES (1,"hangover","tv","2016");
-INSERT INTO title VALUES ("wolf of wall street","tv","2017");
+INSERT INTO title(titleName,typeOfMovie,yearOfRelease) VALUES (1,"hangover","tv","2016");
+INSERT INTO title(titleName,typeOfMovie,yearOfRelease) VALUES ("wolf of wall street","tv","2017");
 INSERT INTO title VALUES ("social network","tv","2017");
 
 INSERT INTO rentals VALUES (1,1,1,"02/10/2019",NULL,0);

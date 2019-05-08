@@ -50,10 +50,11 @@ public class RentWithLoyalty extends Request {
             customer = databaseInterface.getCustomerData(customerID);
             if (customer == null) return false;
         } catch (SQLException e) {
-            sendError("error get Customer Data");
+            e.printStackTrace();
+            sendError("Couldn't get Customer Data");
             return false;
         } catch (InvalidCard invalidCard) {
-            sendError("invalidd card");
+            sendError("invalid card");
             return false;
         }
         Title title;
@@ -61,6 +62,7 @@ public class RentWithLoyalty extends Request {
             title = databaseInterface.getTitleData(productID);
             if (title == null) return false;
         } catch (SQLException e) {
+            e.printStackTrace();
             sendError("error get title Data");
             return false;
         } catch (ParseException e) {
@@ -70,7 +72,7 @@ public class RentWithLoyalty extends Request {
         if (customer.rentWithLoyaltyPoints()) {
             return true;
         } else {
-            sendError("You have to change your AccessLevel to " + title.getProductType().getType());
+            sendError("You do not have enough loyalty points you have: "+customer.getMembershipCard().getLoyaltyPoints());
             return false;
         }
     }
@@ -82,6 +84,7 @@ public class RentWithLoyalty extends Request {
             databaseInterface.executeCommand(DatabaseCommands.createRental(customerID, productID));
             databaseInterface.executeCommand(DatabaseCommands.updateTitleRented(customerID, true));
             databaseInterface.executeCommand(DatabaseCommands.updateLoyaltyPoints(customerID,-100));
+            sendSuccess("Created Rental with loyalty");
         } catch (SQLException e) {
             sendError("Error connecting to database");
         }

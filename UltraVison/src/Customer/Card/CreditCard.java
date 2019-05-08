@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 public class CreditCard extends Card {
 
     CreditCard(Long cardNumber) throws InvalidCard {
-        super(cardNumber,"Credit Card");
+        super(cardNumber,"credit");
     }
 
     @Override

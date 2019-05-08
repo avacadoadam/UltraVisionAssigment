@@ -46,7 +46,7 @@ public class RentWithAccess extends Request {
             sendError("error get Customer Data");
             return false;
         } catch (InvalidCard invalidCard) {
-            sendError("error parsing date");
+            sendError("error parsing Card");
             return false;
         }
         Title title;
@@ -54,7 +54,7 @@ public class RentWithAccess extends Request {
             title = databaseInterface.getTitleData(productID);
             if (title == null) return false;
         } catch (SQLException e) {
-            sendError("error get title Data");
+            sendError("Could not get Title Data");
             return false;
         } catch (ParseException e) {
             sendError("error parsing date");
@@ -74,7 +74,9 @@ public class RentWithAccess extends Request {
         try {
             databaseInterface.executeCommand(DatabaseCommands.createRental(customerID, productID));
             databaseInterface.executeCommand(DatabaseCommands.updateTitleRented(customerID, true));
+            sendSuccess("Created Rental with Access Card");
         } catch (SQLException e) {
+            e.printStackTrace();
             sendError("Error connecting to database");
         }
 
